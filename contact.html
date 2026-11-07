@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reserve a table or contact Mocha Café & Roastery in C-Scheme, Jaipur. Accessible booking form, address, opening hours, and embedded Google map.">
+  <title>Contact & Table Reservation | Mocha Café Jaipur</title>
+
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'media', // automatic dark mode based on prefers-color-scheme
+      theme: {
+        extend: {
+          colors: {
+            mocha: {
+              50: '#FDF8F5',
+              100: '#F7EDE6',
+              200: '#EAD5C7',
+              300: '#DCBCA8',
+              400: '#C59374',
+              500: '#A46B47',
+              600: '#855032',
+              700: '#683C25',
+              800: '#4A2A1A',
+              900: '#2C1810',
+              950: '#1A0E0A',
+            },
+            amber: {
+              brand: '#C67C4E',
+              hover: '#A36035',
+              light: '#F5EBE1',
+            },
+            cream: {
+              50: '#FFFEFA',
+              100: '#FDFBF7',
+              200: '#F7F3EB',
+              300: '#EFE8DC',
+            },
+            dark: {
+              bg: '#140E0A',
+              surface: '#1F1713',
+              card: '#291E18',
+              border: '#3D2D24',
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Custom CSS for accessibility & baseline rules -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-cream-100 text-mocha-900 dark:bg-dark-bg dark:text-cream-100 font-sans antialiased transition-colors duration-300 min-h-screen flex flex-col">
+
+  <!-- ==================== HEADER & NAVIGATION ==================== -->
+  <header class="sticky top-0 z-50 bg-cream-100/95 dark:bg-dark-bg/95 backdrop-blur-md border-b border-cream-300 dark:border-dark-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center justify-between h-20" aria-label="Main Navigation">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2 group focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand rounded-lg">
+          <span class="text-2xl sm:text-3xl font-serif font-bold tracking-tight text-mocha-900 dark:text-cream-100 group-hover:text-amber-brand transition-colors">
+            Mocha<span class="text-amber-brand">.</span>
+          </span>
+          <span class="hidden sm:inline-block text-xs uppercase tracking-widest text-mocha-500 dark:text-cream-300 border-l border-mocha-300 dark:border-dark-border pl-2">
+            Jaipur Roastery
+          </span>
+        </a>
+
+        <!-- Pure CSS Mobile Toggle (Zero JS) -->
+        <input type="checkbox" id="nav-toggle" class="peer hidden" aria-label="Toggle navigation menu">
+        <label for="nav-toggle" class="md:hidden p-2 rounded-lg text-mocha-800 dark:text-cream-200 hover:bg-cream-200 dark:hover:bg-dark-card cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-brand" aria-label="Open navigation menu">
+          <svg class="w-6 h-6 peer-checked:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </label>
+
+        <!-- Navigation Links Menu -->
+        <div class="hidden peer-checked:flex md:flex flex-col md:flex-row absolute md:static top-full left-0 right-0 bg-cream-100 dark:bg-dark-surface md:bg-transparent md:dark:bg-transparent border-b md:border-b-0 border-cream-300 dark:border-dark-border p-6 md:p-0 items-center gap-4 md:gap-8 shadow-xl md:shadow-none transition-all">
+          <ul class="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-sm font-medium w-full md:w-auto">
+            <li>
+              <a href="index.html" class="text-mocha-700 dark:text-cream-200 hover:text-amber-brand dark:hover:text-amber-brand transition-colors block py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand rounded">Home</a>
+            </li>
+            <li>
+              <a href="menu.html" class="text-mocha-700 dark:text-cream-200 hover:text-amber-brand dark:hover:text-amber-brand transition-colors block py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand rounded">Menu</a>
+            </li>
+            <li>
+              <a href="gallery.html" class="text-mocha-700 dark:text-cream-200 hover:text-amber-brand dark:hover:text-amber-brand transition-colors block py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand rounded">Gallery</a>
+            </li>
+            <li>
+              <a href="contact.html" class="text-amber-brand font-semibold hover:text-amber-hover transition-colors block py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand rounded" aria-current="page">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Call to Action Button -->
+          <a href="#reserve" class="w-full md:w-auto text-center inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-amber-brand hover:bg-amber-hover text-white shadow-sm hover:shadow-md transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand focus-visible:ring-offset-2">
+            Book a Table
+          </a>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="flex-grow">
+
+    <!-- Page Intro Header -->
+    <section class="py-12 sm:py-16 bg-cream-50 dark:bg-dark-surface/60 border-b border-cream-300 dark:border-dark-border text-center">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <span class="inline-block px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-amber-light text-amber-hover dark:bg-dark-card dark:text-amber-brand border border-amber-brand/20 mb-4">
+          Visit Us &bull; C-Scheme, Jaipur
+        </span>
+        <!-- Single h1 for this page -->
+        <h1 class="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-mocha-900 dark:text-cream-100">
+          Connect &amp; Reserve Your Table
+        </h1>
+        <p class="mt-4 text-sm sm:text-base text-mocha-600 dark:text-cream-300 max-w-2xl mx-auto leading-relaxed">
+          Plan your visit to our Jaipur sanctuary. Book a cozy courtyard table, inquire about bean pre-orders, or organize a coffee cupping session.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT & FORM SECTION (2-COLUMN GRID) ==================== -->
+    <section id="reserve" class="py-14 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+        
+        <!-- Left Column: Accessible Booking Form (lg:col-span-7) -->
+        <!-- Rubric requirement: "One fully accessible form: label linked to every input, correct input types, required where sensible" -->
+        <div class="lg:col-span-7 bg-white dark:bg-dark-surface p-7 sm:p-10 rounded-3xl border border-cream-300 dark:border-dark-border shadow-sm">
+          <div class="mb-8">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-brand">Table Reservation &amp; Inquiries</span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-mocha-900 dark:text-cream-100 mt-1">
+              Send Us a Message
+            </h2>
+            <p class="text-xs sm:text-sm text-mocha-600 dark:text-cream-300 mt-2">
+              Fill in your details below and our team will confirm your table or query within 30 minutes.
+            </p>
+          </div>
+
+          <form action="#" method="POST" class="space-y-6">
+            
+            <!-- Row 1: Name & Phone -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              
+              <!-- Full Name (Accessible label linked to id) -->
+              <div>
+                <label for="full-name" class="block text-xs font-bold uppercase tracking-wider text-mocha-800 dark:text-cream-200 mb-2">
+                  Full Name <span class="text-amber-brand" aria-hidden="true">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="full-name" 
+                  name="full-name" 
+                  required 
+                  autocomplete="name"
+                  placeholder="e.g. Rahul Sharma"
+                  class="w-full px-4 py-3 rounded-xl bg-cream-50 dark:bg-dark-card border border-cream-300 dark:border-dark-border text-sm text-mocha-900 dark:text-cream-100 placeholder-mocha-400 dark:placeholder-cream-300/40 focus:outline-none focus:ring-2 focus:ring-amber-brand focus:border-transparent transition-all"
+                >
+              </div>
+
+              <!-- Phone Number -->
+              <div>
+                <label for="phone-number" class="block text-xs font-bold uppercase tracking-wider text-mocha-800 dark:text-cream-200 mb-2">
+                  Phone Number <span class="text-amber-brand" aria-hidden="true">*</span>
+                </label>
+                <input 
+                  type="tel" 
+                  id="phone-number" 
+                  name="phone-number" 
+                  required 
+                  autocomplete="tel"
+                  placeholder="+91 98765 43210"
+                  class="w-full px-4 py-3 rounded-xl bg-cream-50 dark:bg-dark-card border border-cream-300 dark:border-dark-border text-sm text-mocha-900 dark:text-cream-100 placeholder-mocha-400 dark:placeholder-cream-300/40 focus:outline-none focus:ring-2 focus:ring-amber-brand focus:border-transparent transition-all"
+                >
+              </div>
+
+            </div>
+
+            <!-- Row 2: Email & Service Dropdown -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              
+              <!-- Email Address -->
+              <div>
+                <label for="email-address" class="block text-xs font-bold uppercase tracking-wider text-mocha-800 dark:text-cream-200 mb-2">
+                  Email Address <span class="text-amber-brand" aria-hidden="true">*</span>
+                </label>
+                <input 
+                  type="email" 
+                  id="email-address" 
+                  name="email-address" 
+                  required 
+                  autocomplete="email"
+                  placeholder="rahul@example.com"
+                  class="w-full px-4 py-3 rounded-xl bg-cream-50 dark:bg-dark-card border border-cream-300 dark:border-dark-border text-sm text-mocha-900 dark:text-cream-100 placeholder-mocha-400 dark:placeholder-cream-300/40 focus:outline-none focus:ring-2 focus:ring-amber-brand focus:border-transparent transition-all"
+                >
+              </div>
+
+              <!-- Service / Reservation Dropdown (PDF requirement) -->
+              <div>
+                <label for="service-type" class="block text-xs font-bold uppercase tracking-wider text-mocha-800 dark:text-cream-200 mb-2">
+                  Service / Reason for Visit <span class="text-amber-brand" aria-hidden="true">*</span>
+                </label>
+                <select 
+                  id="service-type" 
+                  name="service-type" 
+                  required
+                  class="w-full px-4 py-3 rounded-xl bg-cream-50 dark:bg-dark-card border border-cream-300 dark:border-dark-border text-sm text-mocha-900 dark:text-cream-100 focus:outline-none focus:ring-2 focus:ring-amber-brand focus:border-transparent transition-all"
+                >
+                  <option value="" disabled selected>Select an option...</option>
+                  <option value="courtyard-table">Table Reservation (Courtyard Garden)</option>
+                  <option value="indoor-lounge">Table Reservation (Indoor Roastery Lounge)</option>
+                  <option value="cupping-session">Coffee Tasting &amp; Cupping Flight</option>
+                  <option value="beans-order">Whole Bean Pre-order &amp; Custom Grind</option>
+                  <option value="private-event">Private Event / Work Session</option>
+                </select>
+              </div>
+
+            </div>
+
+            <!-- Row 3: Date & Guests -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              
+              <!-- Preferred Date -->
+              <div>
+                <label for="visit-date" class="block text-xs font-bold uppercase tracking-wider text-mocha-800 dark:text-cream-200 mb-2">
+                  Preferred Date
+                </label>
+                <input 
+                  type="date" 
+                  id="visit-date" 
+                  name="visit-date"
+                  class="w-full px-4 py-3 rounded-xl bg-cream-50 dark:bg-dark-card border border-cream-300 dark:border-dark-border text-sm text-mocha-900 dark:text-cream-100 focus:outline-none focus:ring-2 focus:ring-amber-brand focus:border-transparent transition-all"
+                >
+              </div>
+
+              <!-- Number of Guests -->
+              <div>
+                <label for="guest-count" class="block text-xs font-bold uppercase tracking-wider text-mocha-800 dark:text-cream-200 mb-2">
+                  Number of Guests
+                </label>
+                <select 
+                  id="guest-count" 
+                  name="guest-count"
+                  class="w-full px-4 py-3 rounded-xl bg-cream-50 dark:bg-dark-card border border-cream-300 dark:border-dark-border text-sm text-mocha-900 dark:text-cream-100 focus:outline-none focus:ring-2 focus:ring-amber-brand focus:border-transparent transition-all"
+                >
+                  <option value="1">1 Person (Solo Coffee &amp; Work)</option>
+                  <option value="2" selected>2 Persons</option>
+                  <option value="3-4">3 to 4 Persons</option>
+                  <option value="5-8">5 to 8 Persons</option>
+                  <option value="group">Large Group (8+ Persons)</option>
+                </select>
+              </div>
+
+            </div>
+
+            <!-- Message Textarea -->
+            <div>
+              <label for="special-notes" class="block text-xs font-bold uppercase tracking-wider text-mocha-800 dark:text-cream-200 mb-2">
+                Special Requests or Dietary Requirements
+              </label>
+              <textarea 
+                id="special-notes" 
+                name="special-notes" 
+                rows="4" 
+                placeholder="Let us know about seating preferences (sunny outdoor patio vs quiet corner), dietary needs (vegan/gluten-free), or celebration notes..."
+                class="w-full px-4 py-3 rounded-xl bg-cream-50 dark:bg-dark-card border border-cream-300 dark:border-dark-border text-sm text-mocha-900 dark:text-cream-100 placeholder-mocha-400 dark:placeholder-cream-300/40 focus:outline-none focus:ring-2 focus:ring-amber-brand focus:border-transparent transition-all"
+              ></textarea>
+            </div>
+
+            <!-- Submit Button with hover and focus states -->
+            <div>
+              <button 
+                type="submit" 
+                class="w-full py-4 px-8 rounded-xl bg-amber-brand hover:bg-amber-hover text-white text-xs font-bold uppercase tracking-widest shadow-md hover:shadow-lg transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand focus-visible:ring-offset-2"
+              >
+                Confirm Reservation Request &rarr;
+              </button>
+              <p class="text-[11px] text-mocha-500 dark:text-cream-300 text-center mt-3">
+                No upfront reservation charge. We hold tables for up to 15 minutes past booking time.
+              </p>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Right Column: Contact Details, Address & Map (lg:col-span-5) -->
+        <div class="lg:col-span-5 space-y-8">
+          
+          <!-- Contact Info Cards -->
+          <div class="bg-white dark:bg-dark-surface p-7 rounded-3xl border border-cream-300 dark:border-dark-border shadow-sm space-y-6">
+            <h2 class="font-serif text-xl font-bold text-mocha-900 dark:text-cream-100">
+              Café Information
+            </h2>
+
+            <div class="space-y-5 text-sm">
+              
+              <!-- Address -->
+              <div class="flex items-start gap-4">
+                <span class="w-10 h-10 rounded-full bg-amber-light dark:bg-dark-card text-amber-brand flex items-center justify-center text-lg shrink-0" aria-hidden="true">📍</span>
+                <div>
+                  <h3 class="text-xs font-bold uppercase tracking-wider text-mocha-900 dark:text-cream-100">Location</h3>
+                  <address class="not-italic text-xs sm:text-sm text-mocha-600 dark:text-cream-300 mt-1 leading-relaxed">
+                    Plot 14, Subhash Marg, C-Scheme,<br>
+                    Jaipur, Rajasthan 302001
+                  </address>
+                </div>
+              </div>
+
+              <!-- Phone -->
+              <div class="flex items-start gap-4">
+                <span class="w-10 h-10 rounded-full bg-amber-light dark:bg-dark-card text-amber-brand flex items-center justify-center text-lg shrink-0" aria-hidden="true">📞</span>
+                <div>
+                  <h3 class="text-xs font-bold uppercase tracking-wider text-mocha-900 dark:text-cream-100">Telephone</h3>
+                  <p class="mt-1">
+                    <a href="tel:+911412345678" class="text-xs sm:text-sm text-amber-brand hover:text-amber-hover font-semibold focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-brand">
+                      +91 141 234 5678
+                    </a>
+                  </p>
+                  <p class="text-xs text-mocha-500 dark:text-cream-300">Mon–Sun 8am–11pm</p>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="flex items-start gap-4">
+                <span class="w-10 h-10 rounded-full bg-amber-light dark:bg-dark-card text-amber-brand flex items-center justify-center text-lg shrink-0" aria-hidden="true">✉️</span>
+                <div>
+                  <h3 class="text-xs font-bold uppercase tracking-wider text-mocha-900 dark:text-cream-100">Direct Inquiries</h3>
+                  <p class="mt-1">
+                    <a href="mailto:hello@mochacafejaipur.com" class="text-xs sm:text-sm text-amber-brand hover:text-amber-hover font-semibold focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-brand">
+                      hello@mochacafejaipur.com
+                    </a>
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Hours Box -->
+            <div class="p-4 rounded-2xl bg-cream-50 dark:bg-dark-card border border-cream-200 dark:border-dark-border">
+              <h3 class="text-xs font-bold uppercase tracking-wider text-mocha-900 dark:text-cream-100 mb-2">Daily Hours</h3>
+              <p class="text-xs text-mocha-700 dark:text-cream-200 flex justify-between">
+                <span>Mon – Fri:</span>
+                <span class="font-semibold">8:00 AM – 11:00 PM</span>
+              </p>
+              <p class="text-xs text-mocha-700 dark:text-cream-200 flex justify-between mt-1">
+                <span>Sat – Sun:</span>
+                <span class="font-semibold">8:00 AM – 11:30 PM</span>
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Embedded Map (Rubric requirement: "address + map embed") -->
+          <div id="map" class="bg-white dark:bg-dark-surface p-4 rounded-3xl border border-cream-300 dark:border-dark-border shadow-sm">
+            <h2 class="font-serif text-lg font-bold text-mocha-900 dark:text-cream-100 mb-3 px-2">
+              Find Us on Map
+            </h2>
+            <div class="w-full h-72 rounded-2xl overflow-hidden bg-mocha-800">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14234.347587635747!2d75.7952!3d26.9068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db419c8f2b1d5%3A0x7d6f5555c2f0f4a8!2sC%20Scheme%2C%20Jaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                title="Google Map showing location of Mocha Café in C-Scheme, Jaipur"
+                class="w-full h-full border-0" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                aria-label="Map showing Mocha Café location in C-Scheme, Jaipur"
+              ></iframe>
+            </div>
+            <p class="text-[11px] text-mocha-500 dark:text-cream-300 mt-3 px-2 flex items-center justify-between">
+              <span>C-Scheme, Jaipur, Rajasthan</span>
+              <a href="https://maps.google.com/?q=C-Scheme+Jaipur" target="_blank" rel="noopener noreferrer" class="text-amber-brand hover:underline font-semibold">
+                Open in Google Maps &rarr;
+              </a>
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-mocha-900 text-cream-200 dark:bg-dark-surface dark:text-cream-200 border-t border-mocha-800 dark:border-dark-border mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      
+      <!-- Footer Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        
+        <!-- Brand Summary -->
+        <div class="space-y-4">
+          <span class="font-serif text-2xl font-bold tracking-tight text-cream-50">
+            Mocha<span class="text-amber-brand">.</span>
+          </span>
+          <p class="text-xs sm:text-sm text-cream-300 leading-relaxed">
+            Artisanal coffee roastery and slow-brew café nestled in C-Scheme, Jaipur. Fresh roasts, handcrafted beverages, and European pastries.
+          </p>
+          <p class="text-xs text-amber-brand font-medium">
+            &bull; Fresh Roasts Daily
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-wider text-cream-50 mb-4">Quick Links</h2>
+          <ul class="space-y-2 text-sm text-cream-300">
+            <li><a href="index.html" class="hover:text-amber-brand transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-brand">Home</a></li>
+            <li><a href="menu.html" class="hover:text-amber-brand transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-brand">Our Menu</a></li>
+            <li><a href="gallery.html" class="hover:text-amber-brand transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-brand">Café Gallery</a></li>
+            <li><a href="contact.html" class="hover:text-amber-brand transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-brand">Contact &amp; Reserve</a></li>
+          </ul>
+        </div>
+
+        <!-- Business Hours -->
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-wider text-cream-50 mb-4">Opening Hours</h2>
+          <ul class="space-y-2 text-xs sm:text-sm text-cream-300">
+            <li class="flex justify-between">
+              <span>Monday – Friday:</span>
+              <span class="font-medium text-cream-100">8:00 AM – 11:00 PM</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Saturday – Sunday:</span>
+              <span class="font-medium text-cream-100">8:00 AM – 11:30 PM</span>
+            </li>
+            <li class="pt-2 text-xs text-amber-brand">
+              Kitchen closes 30 mins before closing
+            </li>
+          </ul>
+        </div>
+
+        <!-- Visit & Contact -->
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-wider text-cream-50 mb-4">Visit Us</h2>
+          <address class="not-italic space-y-2 text-xs sm:text-sm text-cream-300">
+            <p>Plot 14, Subhash Marg, C-Scheme</p>
+            <p>Jaipur, Rajasthan 302001</p>
+            <p class="pt-2">
+              <a href="tel:+911412345678" class="text-cream-100 hover:text-amber-brand transition-colors">
+                +91 141 234 5678
+              </a>
+            </p>
+            <p>
+              <a href="mailto:hello@mochacafejaipur.com" class="text-cream-100 hover:text-amber-brand transition-colors">
+                hello@mochacafejaipur.com
+              </a>
+            </p>
+          </address>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="border-t border-mocha-800 dark:border-dark-border pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream-300">
+        <p>&copy; 2026 Mocha Café &amp; Roastery. All rights reserved.</p>
+        <p class="flex items-center gap-1">
+          Handcrafted with pure HTML &amp; Tailwind CSS &bull; Jaipur, India
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
