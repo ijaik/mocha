@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Visual photo gallery of Mocha Café & Roastery in C-Scheme, Jaipur. Explore our sunlit courtyard, artisan roasting machines, latte art, and bakery.">
+  <meta name="description"
+    content="Visual photo gallery of Mocha Café & Roastery in C-Scheme, Jaipur. Explore our sunlit courtyard, artisan roasting machines, latte art, and bakery.">
   <title>Photo Gallery | Mocha Café Jaipur</title>
-
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
   <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -62,50 +65,62 @@
   <!-- Custom CSS for accessibility & baseline rules -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="bg-cream-100 text-mocha-900 dark:bg-dark-bg dark:text-cream-100 font-sans antialiased transition-colors duration-300 min-h-screen flex flex-col">
+
+<body
+  class="bg-cream-100 text-mocha-900 dark:bg-dark-bg dark:text-cream-100 font-sans antialiased transition-colors duration-300 min-h-screen flex flex-col">
 
   <!-- ==================== HEADER & NAVIGATION ==================== -->
-  <header class="sticky top-0 z-50 bg-cream-100/95 dark:bg-dark-bg/95 backdrop-blur-md border-b border-cream-300 dark:border-dark-border">
+  <header
+    class="sticky top-0 z-50 bg-cream-100/95 dark:bg-dark-bg/95 backdrop-blur-md border-b border-cream-300 dark:border-dark-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center justify-between h-20" aria-label="Main Navigation">
-        
+
         <!-- Logo -->
-        <a href="index.html" class="flex items-center gap-2 group focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand rounded-lg">
-          <span class="text-2xl sm:text-3xl font-serif font-bold tracking-tight text-mocha-900 dark:text-cream-100 group-hover:text-amber-brand transition-colors">
+        <a href="index.html"
+          class="group focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand rounded-lg">
+          <span
+            class="text-2xl sm:text-3xl font-serif font-bold tracking-tight text-mocha-900 dark:text-cream-100 group-hover:text-amber-brand transition-colors">
             Mocha<span class="text-amber-brand">.</span>
-          </span>
-          <span class="hidden sm:inline-block text-xs uppercase tracking-widest text-mocha-500 dark:text-cream-300 border-l border-mocha-300 dark:border-dark-border pl-2">
-            Jaipur Roastery
           </span>
         </a>
 
         <!-- Pure CSS Mobile Toggle (Zero JS) -->
         <input type="checkbox" id="nav-toggle" class="peer hidden" aria-label="Toggle navigation menu">
-        <label for="nav-toggle" class="md:hidden p-2 rounded-lg text-mocha-800 dark:text-cream-200 hover:bg-cream-200 dark:hover:bg-dark-card cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-brand" aria-label="Open navigation menu">
-          <svg class="w-6 h-6 peer-checked:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        <label for="nav-toggle"
+          class="md:hidden p-2 rounded-lg text-mocha-800 dark:text-cream-200 hover:bg-cream-200 dark:hover:bg-dark-card cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-brand"
+          aria-label="Open navigation menu">
+          <svg class="w-6 h-6 peer-checked:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </label>
 
         <!-- Navigation Links Menu -->
-        <div class="hidden peer-checked:flex md:flex flex-col md:flex-row absolute md:static top-full left-0 right-0 bg-cream-100 dark:bg-dark-surface md:bg-transparent md:dark:bg-transparent border-b md:border-b-0 border-cream-300 dark:border-dark-border p-6 md:p-0 items-center gap-4 md:gap-8 shadow-xl md:shadow-none transition-all">
+        <div
+          class="hidden peer-checked:flex md:flex flex-col md:flex-row absolute md:static top-full left-0 right-0 bg-cream-100 dark:bg-dark-surface md:bg-transparent md:dark:bg-transparent border-b md:border-b-0 border-cream-300 dark:border-dark-border p-6 md:p-0 items-center gap-4 md:gap-8 shadow-xl md:shadow-none transition-all">
           <ul class="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-sm font-medium w-full md:w-auto">
             <li>
-              <a href="index.html" class="text-mocha-700 dark:text-cream-200 hover:text-amber-brand dark:hover:text-amber-brand transition-colors block py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand rounded">Home</a>
+              <a href="index.html"
+                class="text-mocha-700 dark:text-cream-200 hover:text-amber-brand dark:hover:text-amber-brand transition-colors block py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand rounded">Home</a>
             </li>
             <li>
-              <a href="menu.html" class="text-mocha-700 dark:text-cream-200 hover:text-amber-brand dark:hover:text-amber-brand transition-colors block py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand rounded">Menu</a>
+              <a href="menu.html"
+                class="text-mocha-700 dark:text-cream-200 hover:text-amber-brand dark:hover:text-amber-brand transition-colors block py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand rounded">Menu</a>
             </li>
             <li>
-              <a href="gallery.html" class="text-amber-brand font-semibold hover:text-amber-hover transition-colors block py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand rounded" aria-current="page">Gallery</a>
+              <a href="gallery.html"
+                class="text-amber-brand font-semibold hover:text-amber-hover transition-colors block py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand rounded"
+                aria-current="page">Gallery</a>
             </li>
             <li>
-              <a href="contact.html" class="text-mocha-700 dark:text-cream-200 hover:text-amber-brand dark:hover:text-amber-brand transition-colors block py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand rounded">Contact</a>
+              <a href="contact.html"
+                class="text-mocha-700 dark:text-cream-200 hover:text-amber-brand dark:hover:text-amber-brand transition-colors block py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand rounded">Contact</a>
             </li>
           </ul>
 
           <!-- Call to Action Button -->
-          <a href="contact.html#reserve" class="w-full md:w-auto text-center inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-amber-brand hover:bg-amber-hover text-white shadow-sm hover:shadow-md transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand focus-visible:ring-offset-2">
+          <a href="contact.html#reserve"
+            class="w-full md:w-auto text-center inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-amber-brand hover:bg-amber-hover text-white shadow-sm hover:shadow-md transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand focus-visible:ring-offset-2">
             Book a Table
           </a>
         </div>
@@ -118,9 +133,11 @@
   <main class="flex-grow">
 
     <!-- Page Intro Header -->
-    <section class="py-12 sm:py-16 bg-cream-50 dark:bg-dark-surface/60 border-b border-cream-300 dark:border-dark-border text-center">
+    <section
+      class="py-12 sm:py-16 bg-cream-50 dark:bg-dark-surface/60 border-b border-cream-300 dark:border-dark-border text-center">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <span class="inline-block px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-amber-light text-amber-hover dark:bg-dark-card dark:text-amber-brand border border-amber-brand/20 mb-4">
+        <span
+          class="inline-block px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-amber-light text-amber-hover dark:bg-dark-card dark:text-amber-brand border border-amber-brand/20 mb-4">
           Visual Tour &bull; C-Scheme, Jaipur
         </span>
         <!-- Single h1 for this page -->
@@ -128,7 +145,8 @@
           The Mocha Roastery &amp; Café Gallery
         </h1>
         <p class="mt-4 text-sm sm:text-base text-mocha-600 dark:text-cream-300 max-w-2xl mx-auto leading-relaxed">
-          Step inside our sanctuary: from early morning micro-roasts and hand-poured brews to sun-dappled courtyard moments in Jaipur.
+          Step inside our sanctuary: from early morning micro-roasts and hand-poured brews to sun-dappled courtyard
+          moments in Jaipur.
         </p>
       </div>
     </section>
@@ -136,152 +154,268 @@
     <!-- ==================== RESPONSIVE IMAGE GRID SECTION ==================== -->
     <!-- Rubric requirement: "Gallery — responsive image grid" -->
     <section class="py-14 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Café photo gallery">
-      
-      <!-- CSS Grid: 1 col on mobile, 2 col on tablet, 3-4 col on desktop with varied card spans -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-        
-        <!-- Gallery Card 1: Slow Brew V60 (Large Span) -->
-        <article class="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-cream-300 dark:border-dark-border bg-mocha-900 sm:col-span-2 lg:col-span-2 aspect-[16/9] sm:aspect-[2/1] lg:aspect-[16/9]">
-          <img 
-            src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1200&q=80" 
-            alt="Barista pouring boiling water over freshly ground coffee in a V60 ceramic dripper at Mocha slow bar" 
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            loading="lazy"
-            width="1200"
-            height="675"
-          >
-          <div class="absolute inset-0 bg-gradient-to-t from-mocha-950/90 via-mocha-950/30 to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-6 text-cream-100">
-            <span class="inline-block px-2.5 py-1 rounded text-[11px] font-semibold bg-amber-brand text-white mb-2">Slow Pour Bar</span>
-            <h2 class="font-serif text-xl sm:text-2xl font-bold text-cream-50">Precision V60 Hand Extraction</h2>
-            <p class="text-xs sm:text-sm text-cream-300 mt-1 max-w-lg">Calibrated water temperature and spiral pour unlocking delicate jasmine notes.</p>
+
+      <!-- CSS Grid: Card-based layout matching Menu page (text below image for high readability) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+
+        <!-- Gallery Card 1: Slow Brew V60 -->
+        <article
+          class="bg-white dark:bg-dark-card rounded-2xl border border-cream-300 dark:border-dark-border p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between group">
+          <div>
+            <div class="h-56 sm:h-64 rounded-xl overflow-hidden mb-4 bg-mocha-800">
+              <img src="assets/images/v60-extraction.png"
+                alt="Barista pouring boiling water over freshly ground coffee in a V60 ceramic dripper at Mocha slow bar in Jaipur"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy" width="600" height="360">
+            </div>
+            <h2 class="font-serif text-lg sm:text-xl font-bold text-mocha-900 dark:text-cream-100">
+              Precision V60 Hand Extraction
+            </h2>
+            <p class="text-xs sm:text-sm text-mocha-600 dark:text-cream-300 mt-2 leading-relaxed">
+              Calibrated water temperature and spiral pour unlocking delicate floral and citrus notes in our Jaipur brew
+              lab.
+            </p>
+          </div>
+          <div
+            class="flex items-center justify-between gap-2 mt-4 pt-3 border-t border-cream-200 dark:border-dark-border text-[11px] font-medium text-mocha-500 dark:text-cream-300">
+            <span
+              class="px-2 py-0.5 rounded bg-amber-light text-amber-hover dark:bg-dark-surface dark:text-amber-brand font-semibold">Slow
+              Pour Bar</span>
+            <span>C-Scheme, Jaipur</span>
           </div>
         </article>
 
         <!-- Gallery Card 2: Courtyard Seating -->
-        <article class="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-cream-300 dark:border-dark-border bg-mocha-900 aspect-[4/3] sm:aspect-[4/3]">
-          <img 
-            src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" 
-            alt="Sunlit outdoor cafe courtyard with wooden table, hot espresso cup, and open book in Jaipur" 
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            loading="lazy"
-            width="800"
-            height="600"
-          >
-          <div class="absolute inset-0 bg-gradient-to-t from-mocha-950/90 via-transparent to-transparent opacity-75 group-hover:opacity-95 transition-opacity"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-5 text-cream-100">
-            <span class="text-[11px] font-semibold text-amber-brand uppercase tracking-wider block">Courtyard</span>
-            <h2 class="font-serif text-lg font-bold text-cream-50 mt-0.5">Sun-Drenched Garden Patio</h2>
-            <p class="text-xs text-cream-300 mt-1">Peaceful open-air seating for reading and remote deep work.</p>
+        <article
+          class="bg-white dark:bg-dark-card rounded-2xl border border-cream-300 dark:border-dark-border p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between group">
+          <div>
+            <div class="h-56 sm:h-64 rounded-xl overflow-hidden mb-4 bg-mocha-800">
+              <img src="assets/images/courtyard.png"
+                alt="Sunlit outdoor cafe courtyard with pink sandstone arches and magenta bougainvillea in C-Scheme, Jaipur"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy" width="600" height="360">
+            </div>
+            <h2 class="font-serif text-lg sm:text-xl font-bold text-mocha-900 dark:text-cream-100">
+              Pink Sandstone Garden Patio
+            </h2>
+            <p class="text-xs sm:text-sm text-mocha-600 dark:text-cream-300 mt-2 leading-relaxed">
+              Peaceful open-air seating nestled under pink sandstone arches and bougainvillea for reading and deep work.
+            </p>
+          </div>
+          <div
+            class="flex items-center justify-between gap-2 mt-4 pt-3 border-t border-cream-200 dark:border-dark-border text-[11px] font-medium text-mocha-500 dark:text-cream-300">
+            <span
+              class="px-2 py-0.5 rounded bg-amber-light text-amber-hover dark:bg-dark-surface dark:text-amber-brand font-semibold">Courtyard
+              Oasis</span>
+            <span>Outdoor Terrace</span>
           </div>
         </article>
 
         <!-- Gallery Card 3: Artisan Roaster Machine -->
-        <article class="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-cream-300 dark:border-dark-border bg-mocha-900 aspect-[4/3]">
-          <img 
-            src="https://images.unsplash.com/photo-1518832553480-cd0e625ed3e6?auto=format&fit=crop&w=800&q=80" 
-            alt="Artisan drum coffee roaster with freshly roasted brown Arabica beans cooling in the roastery" 
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            loading="lazy"
-            width="800"
-            height="600"
-          >
-          <div class="absolute inset-0 bg-gradient-to-t from-mocha-950/90 via-transparent to-transparent opacity-75 group-hover:opacity-95 transition-opacity"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-5 text-cream-100">
-            <span class="text-[11px] font-semibold text-amber-brand uppercase tracking-wider block">Roastery Lab</span>
-            <h2 class="font-serif text-lg font-bold text-cream-50 mt-0.5">Small-Batch Drum Roasting</h2>
-            <p class="text-xs text-cream-300 mt-1">Roasted weekly to highlight estate origin characteristics.</p>
+        <article
+          class="bg-white dark:bg-dark-card rounded-2xl border border-cream-300 dark:border-dark-border p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between group">
+          <div>
+            <div class="h-56 sm:h-64 rounded-xl overflow-hidden mb-4 bg-mocha-800">
+              <img src="assets/images/roaster.png"
+                alt="Artisan drum coffee roaster with freshly roasted brown Arabica beans in C-Scheme Jaipur roastery"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy" width="600" height="360">
+            </div>
+            <h2 class="font-serif text-lg sm:text-xl font-bold text-mocha-900 dark:text-cream-100">
+              Small-Batch Drum Roasting
+            </h2>
+            <p class="text-xs sm:text-sm text-mocha-600 dark:text-cream-300 mt-2 leading-relaxed">
+              Single-origin Indian estate beans roasted weekly to develop rich cocoa, hazelnut, and caramel profiles.
+            </p>
+          </div>
+          <div
+            class="flex items-center justify-between gap-2 mt-4 pt-3 border-t border-cream-200 dark:border-dark-border text-[11px] font-medium text-mocha-500 dark:text-cream-300">
+            <span
+              class="px-2 py-0.5 rounded bg-amber-light text-amber-hover dark:bg-dark-surface dark:text-amber-brand font-semibold">Roastery
+              Lab</span>
+            <span>Indian Estates</span>
           </div>
         </article>
 
         <!-- Gallery Card 4: Espresso Extraction -->
-        <article class="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-cream-300 dark:border-dark-border bg-mocha-900 aspect-[4/3]">
-          <img 
-            src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=80" 
-            alt="Double stream of rich golden espresso flowing from portafilter into porcelain cup" 
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            loading="lazy"
-            width="800"
-            height="600"
-          >
-          <div class="absolute inset-0 bg-gradient-to-t from-mocha-950/90 via-transparent to-transparent opacity-75 group-hover:opacity-95 transition-opacity"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-5 text-cream-100">
-            <span class="text-[11px] font-semibold text-amber-brand uppercase tracking-wider block">Espresso Bar</span>
-            <h2 class="font-serif text-lg font-bold text-cream-50 mt-0.5">9-Bar Pressure Extraction</h2>
-            <p class="text-xs text-cream-300 mt-1">Thick hazelnut crema pulled fresh for every order.</p>
+        <article
+          class="bg-white dark:bg-dark-card rounded-2xl border border-cream-300 dark:border-dark-border p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between group">
+          <div>
+            <div class="h-56 sm:h-64 rounded-xl overflow-hidden mb-4 bg-mocha-800">
+              <img src="assets/images/espresso-extraction.png"
+                alt="Handcrafted sea-salt caramel mocha in terracotta cup with latte art in Jaipur cafe"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy" width="600" height="360">
+            </div>
+            <h2 class="font-serif text-lg sm:text-xl font-bold text-mocha-900 dark:text-cream-100">
+              Signature Terracotta Mocha
+            </h2>
+            <p class="text-xs sm:text-sm text-mocha-600 dark:text-cream-300 mt-2 leading-relaxed">
+              Freshly pulled double espresso combined with dark Belgian chocolate and served in handcrafted local
+              ceramics.
+            </p>
+          </div>
+          <div
+            class="flex items-center justify-between gap-2 mt-4 pt-3 border-t border-cream-200 dark:border-dark-border text-[11px] font-medium text-mocha-500 dark:text-cream-300">
+            <span
+              class="px-2 py-0.5 rounded bg-amber-light text-amber-hover dark:bg-dark-surface dark:text-amber-brand font-semibold">Espresso
+              Bar</span>
+            <span>Local Pottery</span>
           </div>
         </article>
 
         <!-- Gallery Card 5: Artisan Bakery Croissants -->
-        <article class="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-cream-300 dark:border-dark-border bg-mocha-900 aspect-[4/3]">
-          <img 
-            src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" 
-            alt="Freshly baked artisan croissants and pastries displayed on bakery tray at Mocha kitchen" 
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            loading="lazy"
-            width="800"
-            height="600"
-          >
-          <div class="absolute inset-0 bg-gradient-to-t from-mocha-950/90 via-transparent to-transparent opacity-75 group-hover:opacity-95 transition-opacity"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-5 text-cream-100">
-            <span class="text-[11px] font-semibold text-amber-brand uppercase tracking-wider block">Patisserie</span>
-            <h2 class="font-serif text-lg font-bold text-cream-50 mt-0.5">Laminated Butter Viennoiserie</h2>
-            <p class="text-xs text-cream-300 mt-1">Hand-rolled French butter croissants fresh from the oven.</p>
+        <article
+          class="bg-white dark:bg-dark-card rounded-2xl border border-cream-300 dark:border-dark-border p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between group">
+          <div>
+            <div class="h-56 sm:h-64 rounded-xl overflow-hidden mb-4 bg-mocha-800">
+              <img src="assets/images/pastry.png"
+                alt="Freshly baked artisan croissants and pistachio rose cruffins displayed at Mocha Jaipur bakery"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy" width="600" height="360">
+            </div>
+            <h2 class="font-serif text-lg sm:text-xl font-bold text-mocha-900 dark:text-cream-100">
+              Jaipur Rose &amp; Butter Viennoiserie
+            </h2>
+            <p class="text-xs sm:text-sm text-mocha-600 dark:text-cream-300 mt-2 leading-relaxed">
+              Oven-fresh 72-layer French butter croissants and pistachio cruffins infused with Jaipur rose essence.
+            </p>
+          </div>
+          <div
+            class="flex items-center justify-between gap-2 mt-4 pt-3 border-t border-cream-200 dark:border-dark-border text-[11px] font-medium text-mocha-500 dark:text-cream-300">
+            <span
+              class="px-2 py-0.5 rounded bg-amber-light text-amber-hover dark:bg-dark-surface dark:text-amber-brand font-semibold">Artisan
+              Bakery</span>
+            <span>Baked at 7 AM</span>
           </div>
         </article>
 
-        <!-- Gallery Card 6: Warm Evening Ambiance (Large Span on desktop) -->
-        <article class="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-cream-300 dark:border-dark-border bg-mocha-900 sm:col-span-2 lg:col-span-2 aspect-[16/9] sm:aspect-[2/1] lg:aspect-[16/9]">
-          <img 
-            src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1200&q=80" 
-            alt="Warm evening ambiance inside Mocha Cafe in Jaipur with glowing lights and patrons enjoying drinks" 
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            loading="lazy"
-            width="1200"
-            height="675"
-          >
-          <div class="absolute inset-0 bg-gradient-to-t from-mocha-950/90 via-mocha-950/30 to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-6 text-cream-100">
-            <span class="inline-block px-2.5 py-1 rounded text-[11px] font-semibold bg-amber-brand text-white mb-2">Ambiance</span>
-            <h2 class="font-serif text-xl sm:text-2xl font-bold text-cream-50">Warm Amber Evenings</h2>
-            <p class="text-xs sm:text-sm text-cream-300 mt-1 max-w-lg">Low acoustic tunes, warm lighting, and intimate conversation booths.</p>
+        <!-- Gallery Card 6: Warm Evening Ambiance -->
+        <article
+          class="bg-white dark:bg-dark-card rounded-2xl border border-cream-300 dark:border-dark-border p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between group">
+          <div>
+            <div class="h-56 sm:h-64 rounded-xl overflow-hidden mb-4 bg-mocha-800">
+              <img src="assets/images/evening.png"
+                alt="Warm evening ambiance inside Mocha Cafe courtyard in Jaipur with glowing brass lanterns"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy" width="600" height="360">
+            </div>
+            <h2 class="font-serif text-lg sm:text-xl font-bold text-mocha-900 dark:text-cream-100">
+              Warm Amber Evenings
+            </h2>
+            <p class="text-xs sm:text-sm text-mocha-600 dark:text-cream-300 mt-2 leading-relaxed">
+              Intimate courtyard nights lit by authentic pierced Rajasthani brass lanterns, candles, and acoustic music.
+            </p>
+          </div>
+          <div
+            class="flex items-center justify-between gap-2 mt-4 pt-3 border-t border-cream-200 dark:border-dark-border text-[11px] font-medium text-mocha-500 dark:text-cream-300">
+            <span
+              class="px-2 py-0.5 rounded bg-amber-light text-amber-hover dark:bg-dark-surface dark:text-amber-brand font-semibold">Courtyard
+              Ambiance</span>
+            <span>Twilight Hours</span>
           </div>
         </article>
 
-        <!-- Gallery Card 7: Handcrafted Latte Art -->
-        <article class="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-cream-300 dark:border-dark-border bg-mocha-900 aspect-[4/3]">
-          <img 
-            src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=800&q=80" 
-            alt="Detailed tulip latte art in a handcrafted ceramic cup sitting on a rustic wooden saucer" 
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            loading="lazy"
-            width="800"
-            height="600"
-          >
-          <div class="absolute inset-0 bg-gradient-to-t from-mocha-950/90 via-transparent to-transparent opacity-75 group-hover:opacity-95 transition-opacity"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-5 text-cream-100">
-            <span class="text-[11px] font-semibold text-amber-brand uppercase tracking-wider block">Latte Art</span>
-            <h2 class="font-serif text-lg font-bold text-cream-50 mt-0.5">Micro-Foam Tulip Art</h2>
-            <p class="text-xs text-cream-300 mt-1">Silky steamed milk poured with practiced barista precision.</p>
+        <!-- Gallery Card 7: Handcrafted Cold Brew -->
+        <article
+          class="bg-white dark:bg-dark-card rounded-2xl border border-cream-300 dark:border-dark-border p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between group">
+          <div>
+            <div class="h-56 sm:h-64 rounded-xl overflow-hidden mb-4 bg-mocha-800">
+              <img src="assets/images/18-coldbrew.png"
+                alt="18-hour cold brew over ice on marble table in sunlit Jaipur courtyard"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy" width="600" height="360">
+            </div>
+            <h2 class="font-serif text-lg sm:text-xl font-bold text-mocha-900 dark:text-cream-100">
+              18-Hour Reserve Cold Brew
+            </h2>
+            <p class="text-xs sm:text-sm text-mocha-600 dark:text-cream-300 mt-2 leading-relaxed">
+              Slow steeped for 18 hours and served over crystal clear ice with an orange twist on sunlit marble tables.
+            </p>
+          </div>
+          <div
+            class="flex items-center justify-between gap-2 mt-4 pt-3 border-t border-cream-200 dark:border-dark-border text-[11px] font-medium text-mocha-500 dark:text-cream-300">
+            <span
+              class="px-2 py-0.5 rounded bg-amber-light text-amber-hover dark:bg-dark-surface dark:text-amber-brand font-semibold">Cold
+              Brew Bar</span>
+            <span>Zero Acidity</span>
+          </div>
+        </article>
+
+        <!-- Gallery Card 8: Micro-Foam Tulip Latte Art -->
+        <article
+          class="bg-white dark:bg-dark-card rounded-2xl border border-cream-300 dark:border-dark-border p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between group">
+          <div>
+            <div class="h-56 sm:h-64 rounded-xl overflow-hidden mb-4 bg-mocha-800">
+              <img src="assets/images/classic-flat-white.png"
+                alt="Detailed tulip latte art in a ceramic cup at Mocha Jaipur"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy" width="600" height="360">
+            </div>
+            <h2 class="font-serif text-lg sm:text-xl font-bold text-mocha-900 dark:text-cream-100">
+              Micro-Foam Tulip Latte Art
+            </h2>
+            <p class="text-xs sm:text-sm text-mocha-600 dark:text-cream-300 mt-2 leading-relaxed">
+              Silky textured steamed milk poured by experienced baristas revealing deep cocoa and toasted hazelnut
+              notes.
+            </p>
+          </div>
+          <div
+            class="flex items-center justify-between gap-2 mt-4 pt-3 border-t border-cream-200 dark:border-dark-border text-[11px] font-medium text-mocha-500 dark:text-cream-300">
+            <span
+              class="px-2 py-0.5 rounded bg-amber-light text-amber-hover dark:bg-dark-surface dark:text-amber-brand font-semibold">Barista
+              Craft</span>
+            <span>Espresso Art</span>
+          </div>
+        </article>
+
+        <!-- Gallery Card 9: Heritage Café Lounge -->
+        <article
+          class="bg-white dark:bg-dark-card rounded-2xl border border-cream-300 dark:border-dark-border p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between group">
+          <div>
+            <div class="h-56 sm:h-64 rounded-xl overflow-hidden mb-4 bg-mocha-800">
+              <img src="assets/images/hero-jaipur.png"
+                alt="Sunlit interior of Mocha Café in C-Scheme, Jaipur with pink sandstone arches and marble bar"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy" width="600" height="360">
+            </div>
+            <h2 class="font-serif text-lg sm:text-xl font-bold text-mocha-900 dark:text-cream-100">
+              Heritage Sandstone Lounge
+            </h2>
+            <p class="text-xs sm:text-sm text-mocha-600 dark:text-cream-300 mt-2 leading-relaxed">
+              A serene indoor lounge balancing Rajasthani architecture, fluted woodwork, and modern specialty coffee
+              culture.
+            </p>
+          </div>
+          <div
+            class="flex items-center justify-between gap-2 mt-4 pt-3 border-t border-cream-200 dark:border-dark-border text-[11px] font-medium text-mocha-500 dark:text-cream-300">
+            <span
+              class="px-2 py-0.5 rounded bg-amber-light text-amber-hover dark:bg-dark-surface dark:text-amber-brand font-semibold">Café
+              Interior</span>
+            <span>C-Scheme, Jaipur</span>
           </div>
         </article>
 
       </div>
 
       <!-- Bottom Invite Banner -->
-      <div class="mt-14 sm:mt-18 p-8 sm:p-10 rounded-3xl bg-cream-50 dark:bg-dark-surface border border-cream-300 dark:border-dark-border text-center flex flex-col items-center">
+      <div
+        class="mt-14 sm:mt-18 p-8 sm:p-10 rounded-3xl bg-cream-50 dark:bg-dark-surface border border-cream-300 dark:border-dark-border text-center flex flex-col items-center">
         <span class="text-xs font-bold uppercase tracking-widest text-amber-brand">Experience It Live</span>
         <h2 class="font-serif text-2xl sm:text-3xl font-bold text-mocha-900 dark:text-cream-100 mt-2">
           Come Savor the Atmosphere in Person
         </h2>
         <p class="text-mocha-600 dark:text-cream-300 text-xs sm:text-sm max-w-lg mt-2">
-          Whether you need a sunlit corner to write, a warm table to catch up with friends, or freshly roasted beans for your home bar.
+          Whether you need a sunlit corner to write, a warm table to catch up with friends, or freshly roasted beans for
+          your home bar.
         </p>
         <div class="flex flex-col sm:flex-row items-center gap-4 mt-6">
-          <a href="contact.html#reserve" class="inline-flex items-center justify-center px-7 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-brand hover:bg-amber-hover text-white shadow-md transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand">
+          <a href="contact.html#reserve"
+            class="inline-flex items-center justify-center px-7 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-brand hover:bg-amber-hover text-white shadow-md transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand">
             Book A Courtyard Table
           </a>
-          <a href="menu.html" class="inline-flex items-center justify-center px-7 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider border-2 border-mocha-800 text-mocha-800 dark:border-cream-300 dark:text-cream-100 hover:bg-mocha-800 hover:text-white dark:hover:bg-cream-100 dark:hover:text-mocha-900 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand">
+          <a href="menu.html"
+            class="inline-flex items-center justify-center px-7 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider border-2 border-mocha-800 text-mocha-800 dark:border-cream-300 dark:text-cream-100 hover:bg-mocha-800 hover:text-white dark:hover:bg-cream-100 dark:hover:text-mocha-900 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand">
             Explore Full Menu
           </a>
         </div>
@@ -292,19 +426,21 @@
   </main>
 
   <!-- ==================== FOOTER ==================== -->
-  <footer class="bg-mocha-900 text-cream-200 dark:bg-dark-surface dark:text-cream-200 border-t border-mocha-800 dark:border-dark-border mt-auto">
+  <footer
+    class="bg-mocha-900 text-cream-200 dark:bg-dark-surface dark:text-cream-200 border-t border-mocha-800 dark:border-dark-border mt-auto">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-      
+
       <!-- Footer Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-        
+
         <!-- Brand Summary -->
         <div class="space-y-4">
           <span class="font-serif text-2xl font-bold tracking-tight text-cream-50">
             Mocha<span class="text-amber-brand">.</span>
           </span>
           <p class="text-xs sm:text-sm text-cream-300 leading-relaxed">
-            Artisanal coffee roastery and slow-brew café nestled in C-Scheme, Jaipur. Fresh roasts, handcrafted beverages, and European pastries.
+            Artisanal coffee roastery and slow-brew café nestled in C-Scheme, Jaipur. Fresh roasts, handcrafted
+            beverages, and European pastries.
           </p>
           <p class="text-xs text-amber-brand font-medium">
             &bull; Fresh Roasts Daily
@@ -315,10 +451,18 @@
         <div>
           <h2 class="text-xs font-bold uppercase tracking-wider text-cream-50 mb-4">Quick Links</h2>
           <ul class="space-y-2 text-sm text-cream-300">
-            <li><a href="index.html" class="hover:text-amber-brand transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-brand">Home</a></li>
-            <li><a href="menu.html" class="hover:text-amber-brand transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-brand">Our Menu</a></li>
-            <li><a href="gallery.html" class="hover:text-amber-brand transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-brand">Café Gallery</a></li>
-            <li><a href="contact.html" class="hover:text-amber-brand transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-brand">Contact &amp; Reserve</a></li>
+            <li><a href="index.html"
+                class="hover:text-amber-brand transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-brand">Home</a>
+            </li>
+            <li><a href="menu.html"
+                class="hover:text-amber-brand transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-brand">Our
+                Menu</a></li>
+            <li><a href="gallery.html"
+                class="hover:text-amber-brand transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-brand">Café
+                Gallery</a></li>
+            <li><a href="contact.html"
+                class="hover:text-amber-brand transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-brand">Contact
+                &amp; Reserve</a></li>
           </ul>
         </div>
 
@@ -352,7 +496,8 @@
               </a>
             </p>
             <p>
-              <a href="mailto:hello@mochacafejaipur.com" class="text-cream-100 hover:text-amber-brand transition-colors">
+              <a href="mailto:hello@mochacafejaipur.com"
+                class="text-cream-100 hover:text-amber-brand transition-colors">
                 hello@mochacafejaipur.com
               </a>
             </p>
@@ -362,7 +507,8 @@
       </div>
 
       <!-- Copyright Bar -->
-      <div class="border-t border-mocha-800 dark:border-dark-border pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream-300">
+      <div
+        class="border-t border-mocha-800 dark:border-dark-border pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream-300">
         <p>&copy; 2026 Mocha Café &amp; Roastery. All rights reserved.</p>
         <p class="flex items-center gap-1">
           Handcrafted with pure HTML &amp; Tailwind CSS &bull; Jaipur, India
@@ -373,4 +519,5 @@
   </footer>
 
 </body>
+
 </html>
