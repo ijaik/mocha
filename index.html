@@ -1,611 +1,242 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Mocha Café & Artisan Roastery in C-Scheme, Jaipur. Freshly roasted single-origin coffee, handcrafted espresso, and artisanal bakery.">
-  <title>Mocha Café & Artisan Roastery | Jaipur</title>
-  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
-  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="Mocha Café & Roastery in C-Scheme, Jaipur. Specialty coffee, fresh bakes and a relaxed courtyard."
+    name="description" />
+  <title>Mocha Café & Roastery | Jaipur</title>
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
-  <!-- Tailwind CSS CDN -->
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'media', // automatic dark mode based on prefers-color-scheme
-      theme: {
-        extend: {
-          colors: {
-            mocha: {
-              50: '#FDF8F5',
-              100: '#F7EDE6',
-              200: '#EAD5C7',
-              300: '#DCBCA8',
-              400: '#C59374',
-              500: '#A46B47',
-              600: '#855032',
-              700: '#683C25',
-              800: '#4A2A1A',
-              900: '#2C1810',
-              950: '#1A0E0A',
-            },
-            amber: {
-              brand: '#C67C4E',
-              hover: '#A36035',
-              light: '#F5EBE1',
-            },
-            cream: {
-              50: '#FFFEFA',
-              100: '#FDFBF7',
-              200: '#F7F3EB',
-              300: '#EFE8DC',
-            },
-            dark: {
-              bg: '#140E0A',
-              surface: '#1F1713',
-              card: '#291E18',
-              border: '#3D2D24',
-            }
-          },
-          fontFamily: {
-            serif: ['"Playfair Display"', 'Georgia', 'serif'],
-            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
-          }
-        }
-      }
-    };
-  </script>
-
-  <!-- Custom CSS for accessibility & baseline rules -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
 </head>
 
 <body
-  class="bg-cream-100 text-mocha-900 dark:bg-dark-bg dark:text-cream-100 font-sans antialiased transition-colors duration-300 min-h-screen flex flex-col">
-
-  <!-- ==================== HEADER & NAVIGATION ==================== -->
-  <header
-    class="sticky top-0 z-50 bg-cream-100/95 dark:bg-dark-bg/95 backdrop-blur-md border-b border-cream-300 dark:border-dark-border">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <nav class="flex items-center justify-between h-20" aria-label="Main Navigation">
-
-        <!-- Logo -->
-        <a href="index.html"
-          class="group focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand rounded-lg">
-          <span
-            class="text-2xl sm:text-3xl font-serif font-bold tracking-tight text-mocha-900 dark:text-cream-100 group-hover:text-amber-brand transition-colors">
-            Mocha<span class="text-amber-brand">.</span>
-          </span>
-        </a>
-
-        <!-- Pure CSS Mobile Toggle (Zero JS) -->
-        <input type="checkbox" id="nav-toggle" class="peer hidden" aria-label="Toggle navigation menu">
-        <label for="nav-toggle"
-          class="md:hidden p-2 rounded-lg text-mocha-800 dark:text-cream-200 hover:bg-cream-200 dark:hover:bg-dark-card cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-brand"
-          aria-label="Open navigation menu">
-          <!-- Hamburger Icon -->
-          <svg class="w-6 h-6 peer-checked:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-            aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </label>
-
-        <!-- Navigation Links Menu -->
-        <div
-          class="hidden peer-checked:flex md:flex flex-col md:flex-row absolute md:static top-full left-0 right-0 bg-cream-100 dark:bg-dark-surface md:bg-transparent md:dark:bg-transparent border-b md:border-b-0 border-cream-300 dark:border-dark-border p-6 md:p-0 items-center gap-4 md:gap-8 shadow-xl md:shadow-none transition-all">
-          <ul class="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-sm font-medium w-full md:w-auto">
-            <li>
-              <a href="index.html"
-                class="text-amber-brand font-semibold hover:text-amber-hover transition-colors block py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand rounded"
-                aria-current="page">Home</a>
-            </li>
-            <li>
-              <a href="menu.html"
-                class="text-mocha-700 dark:text-cream-200 hover:text-amber-brand dark:hover:text-amber-brand transition-colors block py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand rounded">Menu</a>
-            </li>
-            <li>
-              <a href="gallery.html"
-                class="text-mocha-700 dark:text-cream-200 hover:text-amber-brand dark:hover:text-amber-brand transition-colors block py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand rounded">Gallery</a>
-            </li>
-            <li>
-              <a href="contact.html"
-                class="text-mocha-700 dark:text-cream-200 hover:text-amber-brand dark:hover:text-amber-brand transition-colors block py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand rounded">Contact</a>
-            </li>
-          </ul>
-
-          <!-- Call to Action Button -->
-          <a href="contact.html#reserve"
-            class="w-full md:w-auto text-center inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-amber-brand hover:bg-amber-hover text-white shadow-sm hover:shadow-md transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand focus-visible:ring-offset-2">
-            Book a Table
-          </a>
-        </div>
-
-      </nav>
-    </div>
-  </header>
-
-  <!-- ==================== MAIN CONTENT ==================== -->
-  <main class="flex-grow">
-
-    <!-- Hero Section -->
-    <section id="hero"
-      class="relative overflow-hidden py-12 sm:py-16 lg:py-20 border-b border-cream-300 dark:border-dark-border">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
-
-          <!-- Hero Text Content (Left on Desktop) -->
-          <div class="order-2 lg:order-1 space-y-6 text-center lg:text-left">
-
-            <!-- Location Badge -->
-            <div
-              class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-amber-light text-amber-hover dark:bg-dark-card dark:text-amber-brand border border-amber-brand/20">
-              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true"></span>
-              C-Scheme, Jaipur &bull; Specialty Roastery
-            </div>
-
-            <!-- Single h1 per page -->
-            <h1
-              class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-mocha-900 dark:text-cream-100 leading-tight sm:leading-tight">
-              Crafting Exceptional Coffee Moments in <span class="text-amber-brand italic">Jaipur</span>
-            </h1>
-
-            <p
-              class="text-base sm:text-lg text-mocha-600 dark:text-cream-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
-              From single-origin Indian estate beans roasted daily on-site to warm butter croissants and serene
-              courtyard vibes, welcome to your neighborhood slow-brew sanctuary.
-            </p>
-
-            <!-- Call-to-Action Buttons (Domain Must-Have) -->
-            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-              <a href="menu.html"
-                class="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3.5 rounded-full text-sm font-semibold tracking-wide bg-amber-brand hover:bg-amber-hover text-white shadow-md hover:shadow-lg transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand focus-visible:ring-offset-2">
-                Explore Our Menu
-              </a>
-              <a href="contact.html#reserve"
-                class="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3.5 rounded-full text-sm font-semibold tracking-wide border-2 border-mocha-700 text-mocha-800 dark:border-cream-300 dark:text-cream-100 hover:bg-mocha-800 hover:text-white dark:hover:bg-cream-100 dark:hover:text-mocha-900 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand">
-                Reserve a Table
-              </a>
-            </div>
-
-            <!-- Key Quick Highlights / Stats -->
-            <div
-              class="pt-6 border-t border-cream-300 dark:border-dark-border grid grid-cols-3 gap-4 text-center lg:text-left">
-              <div>
-                <p class="font-serif text-xl sm:text-2xl font-bold text-mocha-900 dark:text-cream-100">100%</p>
-                <p class="text-xs text-mocha-500 dark:text-cream-300">Arabica Estate Beans</p>
-              </div>
-              <div>
-                <p class="font-serif text-xl sm:text-2xl font-bold text-mocha-900 dark:text-cream-100">Daily</p>
-                <p class="text-xs text-mocha-500 dark:text-cream-300">Small-Batch Roasting</p>
-              </div>
-              <div>
-                <p class="font-serif text-xl sm:text-2xl font-bold text-mocha-900 dark:text-cream-100">4.9 &#9733;</p>
-                <p class="text-xs text-mocha-500 dark:text-cream-300">1,200+ Happy Guests</p>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Hero Image & Badge (Right on Desktop) -->
-          <div class="order-1 lg:order-2">
-            <div class="mx-auto lg:max-w-none">
-
-
-              <!-- Main Hero Image -->
-              <div
-                class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-cream-50 dark:border-dark-surface bg-mocha-800">
-                <img src="assets/images/hero-jaipur.png"
-                  alt="Sunlit interior of Mocha Café in C-Scheme, Jaipur with pink sandstone arches, brass lamps, and specialty coffee bar"
-                  class="w-full h-80 sm:h-96 lg:h-[460px] object-cover" loading="eager">
-                <!-- Floating In-Image Badge -->
-                <div
-                  class="absolute bottom-4 left-4 right-4 bg-cream-50/95 dark:bg-dark-surface/95 backdrop-blur-sm p-3.5 rounded-xl border border-cream-200 dark:border-dark-border shadow-md flex items-center justify-between">
-                  <div>
-                    <p class="text-xs font-semibold text-mocha-900 dark:text-cream-100">Today's Special Roast</p>
-                    <p class="text-xs text-mocha-500 dark:text-cream-300">Chikmagalur Honey Process</p>
-                  </div>
-                  <span
-                    class="text-xs font-bold text-amber-brand bg-amber-light dark:bg-dark-card px-2.5 py-1 rounded-full">
-                    &#8377;220
-                  </span>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== HIGHLIGHTS STRIP ==================== -->
-    <section
-      class="bg-mocha-900 text-cream-100 dark:bg-dark-surface py-8 border-b border-mocha-800 dark:border-dark-border"
-      aria-label="Café Highlights">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center sm:text-left">
-
-          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-3">
-            <span
-              class="w-10 h-10 rounded-full bg-amber-brand/20 text-amber-brand flex items-center justify-center text-lg shrink-0"
-              aria-hidden="true">☕</span>
-            <div>
-              <h3 class="text-sm font-semibold text-cream-50">Single-Origin Roasts</h3>
-              <p class="text-xs text-cream-300 mt-0.5">Direct trade from Chikmagalur &amp; Coorg</p>
-            </div>
-          </div>
-
-          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-3">
-            <span
-              class="w-10 h-10 rounded-full bg-amber-brand/20 text-amber-brand flex items-center justify-center text-lg shrink-0"
-              aria-hidden="true">🔥</span>
-            <div>
-              <h3 class="text-sm font-semibold text-cream-50">In-House Micro Roasting</h3>
-              <p class="text-xs text-cream-300 mt-0.5">Roasted weekly in small batches</p>
-            </div>
-          </div>
-
-          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-3">
-            <span
-              class="w-10 h-10 rounded-full bg-amber-brand/20 text-amber-brand flex items-center justify-center text-lg shrink-0"
-              aria-hidden="true">🥐</span>
-            <div>
-              <h3 class="text-sm font-semibold text-cream-50">Artisan Bakery</h3>
-              <p class="text-xs text-cream-300 mt-0.5">Fresh croissants &amp; sourdough daily</p>
-            </div>
-          </div>
-
-          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-3">
-            <span
-              class="w-10 h-10 rounded-full bg-amber-brand/20 text-amber-brand flex items-center justify-center text-lg shrink-0"
-              aria-hidden="true">🌿</span>
-            <div>
-              <h3 class="text-sm font-semibold text-cream-50">Courtyard Garden</h3>
-              <p class="text-xs text-cream-300 mt-0.5">Peaceful open-air patio in C-Scheme</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== WHY CHOOSE US (FLEXBOX LAYOUT) ==================== -->
-    <!-- Rubric requirement: "Why choose us" section using Flexbox -->
-    <section
-      class="py-16 sm:py-20 lg:py-24 bg-cream-50 dark:bg-dark-bg border-b border-cream-300 dark:border-dark-border"
-      aria-labelledby="why-choose-us-heading">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        <!-- Section Header -->
-        <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-          <span class="text-xs font-bold uppercase tracking-widest text-amber-brand">The Mocha Difference</span>
-          <h2 id="why-choose-us-heading"
-            class="font-serif text-3xl sm:text-4xl font-bold text-mocha-900 dark:text-cream-100 mt-2">
-            Why Jaipur Chooses Mocha
-          </h2>
-          <p class="text-mocha-600 dark:text-cream-300 text-sm sm:text-base mt-3">
-            We don't just brew coffee; we curate a sensory journey from Indian estates directly into your cup.
-          </p>
-        </div>
-
-        <!-- Flexbox Container for Feature Cards -->
-        <div class="flex flex-col lg:flex-row items-stretch justify-between gap-6 lg:gap-8">
-
-          <!-- Card 1 -->
-          <article
-            class="flex-1 flex flex-col justify-between bg-white dark:bg-dark-surface p-7 sm:p-8 rounded-2xl border border-cream-300 dark:border-dark-border shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200">
-            <div>
-              <div
-                class="w-12 h-12 rounded-xl bg-amber-light dark:bg-dark-card flex items-center justify-center text-xl text-amber-brand mb-5">
-                🎯
-              </div>
-              <h3 class="font-serif text-xl font-bold text-mocha-900 dark:text-cream-100 mb-2">
-                Master Barista Craft
-              </h3>
-              <p class="text-sm text-mocha-600 dark:text-cream-300 leading-relaxed">
-                Every espresso pull is calibrated daily for bean grind, water temperature, and pressure to reveal
-                nuanced caramel and cocoa notes.
-              </p>
-            </div>
-
-          </article>
-
-          <!-- Card 2 -->
-          <article
-            class="flex-1 flex flex-col justify-between bg-white dark:bg-dark-surface p-7 sm:p-8 rounded-2xl border border-cream-300 dark:border-dark-border shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200">
-            <div>
-              <div
-                class="w-12 h-12 rounded-xl bg-amber-light dark:bg-dark-card flex items-center justify-center text-xl text-amber-brand mb-5">
-                🌱
-              </div>
-              <h3 class="font-serif text-xl font-bold text-mocha-900 dark:text-cream-100 mb-2">
-                100% Traceable Estates
-              </h3>
-              <p class="text-sm text-mocha-600 dark:text-cream-300 leading-relaxed">
-                We partner directly with high-elevation, shade-grown plantations in Southern India, ensuring ethical
-                fair-trade wages and premium quality.
-              </p>
-            </div>
-
-          </article>
-
-          <!-- Card 3 -->
-          <article
-            class="flex-1 flex flex-col justify-between bg-white dark:bg-dark-surface p-7 sm:p-8 rounded-2xl border border-cream-300 dark:border-dark-border shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200">
-            <div>
-              <div
-                class="w-12 h-12 rounded-xl bg-amber-light dark:bg-dark-card flex items-center justify-center text-xl text-amber-brand mb-5">
-                🏛️
-              </div>
-              <h3 class="font-serif text-xl font-bold text-mocha-900 dark:text-cream-100 mb-2">
-                Jaipur Heritage Charm
-              </h3>
-              <p class="text-sm text-mocha-600 dark:text-cream-300 leading-relaxed">
-                Designed with indigenous Rajasthani lime-plaster arches and breezy open courtyards, creating a peaceful
-                oasis amidst the Pink City bustle.
-              </p>
-            </div>
-
-          </article>
-
-        </div>
-
-        <!-- Flexbox CTA Banner below cards -->
-        <div
-          class="mt-12 p-6 sm:p-8 rounded-2xl bg-mocha-800 text-cream-100 dark:bg-dark-card flex flex-col md:flex-row items-center justify-between gap-6">
-          <div class="text-center md:text-left">
-            <h3 class="font-serif text-lg sm:text-xl font-bold text-cream-50">Want to sample our single-origin roasts?
-            </h3>
-            <p class="text-xs sm:text-sm text-cream-300 mt-1">Visit our slow-pour brew bar or book a private cupping
-              tasting session.</p>
-          </div>
-          <a href="menu.html"
-            class="inline-flex items-center justify-center px-6 py-3 rounded-full text-xs font-semibold tracking-wider uppercase bg-amber-brand hover:bg-amber-hover text-white transition-all shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand">
-            View Specialty Brews
-          </a>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== TESTIMONIALS SECTION (CSS GRID) ==================== -->
-    <section
-      class="py-16 sm:py-20 lg:py-24 bg-cream-100 dark:bg-dark-surface/50 border-b border-cream-300 dark:border-dark-border"
-      aria-labelledby="testimonials-heading">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        <!-- Section Header -->
-        <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-          <span class="text-xs font-bold uppercase tracking-widest text-amber-brand">Guest Reviews</span>
-          <h2 id="testimonials-heading"
-            class="font-serif text-3xl sm:text-4xl font-bold text-mocha-900 dark:text-cream-100 mt-2">
-            Loved by Jaipur &amp; Travelers
-          </h2>
-          <p class="text-mocha-600 dark:text-cream-300 text-sm sm:text-base mt-3">
-            Real experiences from coffee connoisseurs, daily locals, and creative remote workers.
-          </p>
-        </div>
-
-        <!-- CSS Grid for Testimonials -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-          <!-- Testimonial 1 -->
-          <article
-            class="bg-white dark:bg-dark-card p-8 rounded-2xl border border-cream-300 dark:border-dark-border shadow-sm flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-1 text-amber-brand text-sm mb-4" aria-label="5 out of 5 stars rating">
-                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
-              </div>
-              <blockquote class="text-sm text-mocha-700 dark:text-cream-200 leading-relaxed italic">
-                &ldquo;Easily the best specialty pour-over in Jaipur. The calm courtyard ambiance in C-Scheme makes it
-                my ultimate weekend reading spot.&rdquo;
-              </blockquote>
-            </div>
-            <div class="flex items-center gap-4 mt-6 pt-4 border-t border-cream-200 dark:border-dark-border">
-              <img src="assets/images/ananya.png"
-                alt="Portrait of Ananya Sharma, a regular guest enjoying coffee in Jaipur"
-                class="w-11 h-11 rounded-full object-cover border border-amber-brand" width="44" height="44">
-              <div>
-                <cite class="not-italic text-sm font-semibold text-mocha-900 dark:text-cream-100 block">Ananya
-                  Sharma</cite>
-                <span class="text-xs text-mocha-500 dark:text-cream-300">C-Scheme Resident</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Testimonial 2 -->
-          <article
-            class="bg-white dark:bg-dark-card p-8 rounded-2xl border border-cream-300 dark:border-dark-border shadow-sm flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-1 text-amber-brand text-sm mb-4" aria-label="5 out of 5 stars rating">
-                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
-              </div>
-              <blockquote class="text-sm text-mocha-700 dark:text-cream-200 leading-relaxed italic">
-                &ldquo;Their small-batch Chikmagalur roast is extraordinary. The baristas know their extraction math
-                down to the exact second. Top-tier!&rdquo;
-              </blockquote>
-            </div>
-            <div class="flex items-center gap-4 mt-6 pt-4 border-t border-cream-200 dark:border-dark-border">
-              <img src="assets/images/vikram.png"
-                alt="Portrait of Vikram Rathore, coffee roaster and designer in Jaipur"
-                class="w-11 h-11 rounded-full object-cover border border-amber-brand" width="44" height="44">
-              <div>
-                <cite class="not-italic text-sm font-semibold text-mocha-900 dark:text-cream-100 block">Vikram
-                  Rathore</cite>
-                <span class="text-xs text-mocha-500 dark:text-cream-300">Coffee Roaster &amp; Designer</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Testimonial 3 -->
-          <article
-            class="bg-white dark:bg-dark-card p-8 rounded-2xl border border-cream-300 dark:border-dark-border shadow-sm flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-1 text-amber-brand text-sm mb-4" aria-label="5 out of 5 stars rating">
-                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
-              </div>
-              <blockquote class="text-sm text-mocha-700 dark:text-cream-200 leading-relaxed italic">
-                &ldquo;The fresh warm butter croissants combined with their iced sea-salt mocha are unmatched. As an
-                architect, I truly appreciate how beautifully they preserved the Jaipur sandstone arches.&rdquo;
-              </blockquote>
-            </div>
-            <div class="flex items-center gap-4 mt-6 pt-4 border-t border-cream-200 dark:border-dark-border">
-              <img src="assets/images/rohan.png"
-                alt="Portrait of Rhea Shekhawat, architect and heritage designer in Jaipur"
-                class="w-11 h-11 rounded-full object-cover border border-amber-brand" width="44" height="44">
-              <div>
-                <cite class="not-italic text-sm font-semibold text-mocha-900 dark:text-cream-100 block">Rhea
-                  Shekhawat</cite>
-                <span class="text-xs text-mocha-500 dark:text-cream-300">Architect &amp; Jaipur Resident</span>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== BUSINESS HOURS & CALL-TO-ACTION STRIP ==================== -->
-    <!-- Rubric requirement: Business hours + call-to-action buttons -->
-    <section class="py-12 sm:py-16 bg-cream-200 dark:bg-dark-bg border-b border-cream-300 dark:border-dark-border"
-      aria-labelledby="hours-strip-heading">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div
-          class="bg-mocha-900 text-cream-100 dark:bg-dark-card p-8 sm:p-10 rounded-3xl shadow-xl flex flex-col lg:flex-row items-center justify-between gap-8">
-
-          <!-- Hours & Location Details -->
-          <div class="space-y-3 text-center lg:text-left">
-            <div
-              class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
-              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-              Open Today &bull; 8:00 AM – 11:00 PM
-            </div>
-            <h2 id="hours-strip-heading" class="font-serif text-2xl sm:text-3xl font-bold text-cream-50">
-              Drop By For A Fresh Cup Today
-            </h2>
-            <p class="text-xs sm:text-sm text-cream-300 max-w-xl">
-              Located at Plot 14, Subhash Marg, C-Scheme, Jaipur. Fresh roasts, free high-speed Wi-Fi, and courtyard
-              seating ready for you.
-            </p>
-          </div>
-
-          <!-- Action Buttons -->
-          <div class="flex flex-col sm:flex-row items-center gap-4 w-full lg:w-auto shrink-0">
-            <a href="contact.html#reserve"
-              class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-brand hover:bg-amber-hover text-white shadow-md transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand">
-              Reserve A Table
-            </a>
-            <a href="contact.html#map"
-              class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider border border-cream-300/40 text-cream-100 hover:bg-cream-100 hover:text-mocha-900 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand">
-              Get Directions &rarr;
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ==================== FOOTER ==================== -->
-  <footer
-    class="bg-mocha-900 text-cream-200 dark:bg-dark-surface dark:text-cream-200 border-t border-mocha-800 dark:border-dark-border mt-auto">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-
-      <!-- Footer Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-
-        <!-- Brand Summary -->
-        <div class="space-y-4">
-          <span class="font-serif text-2xl font-bold tracking-tight text-cream-50">
-            Mocha<span class="text-amber-brand">.</span>
-          </span>
-          <p class="text-xs sm:text-sm text-cream-300 leading-relaxed">
-            Artisanal coffee roastery and slow-brew café nestled in C-Scheme, Jaipur. Fresh roasts, handcrafted
-            beverages, and European pastries.
-          </p>
-          <p class="text-xs text-amber-brand font-medium">
-            &bull; Fresh Roasts Daily
-          </p>
-        </div>
-
-        <!-- Quick Links -->
-        <div>
-          <h2 class="text-xs font-bold uppercase tracking-wider text-cream-50 mb-4">Quick Links</h2>
-          <ul class="space-y-2 text-sm text-cream-300">
-            <li><a href="index.html"
-                class="hover:text-amber-brand transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-brand">Home</a>
-            </li>
-            <li><a href="menu.html"
-                class="hover:text-amber-brand transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-brand">Our
-                Menu</a></li>
-            <li><a href="gallery.html"
-                class="hover:text-amber-brand transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-brand">Café
-                Gallery</a></li>
-            <li><a href="contact.html"
-                class="hover:text-amber-brand transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-brand">Contact
-                &amp; Reserve</a></li>
-          </ul>
-        </div>
-
-        <!-- Business Hours -->
-        <div>
-          <h2 class="text-xs font-bold uppercase tracking-wider text-cream-50 mb-4">Opening Hours</h2>
-          <ul class="space-y-2 text-xs sm:text-sm text-cream-300">
-            <li class="flex justify-between">
-              <span>Monday – Friday:</span>
-              <span class="font-medium text-cream-100">8:00 AM – 11:00 PM</span>
-            </li>
-            <li class="flex justify-between">
-              <span>Saturday – Sunday:</span>
-              <span class="font-medium text-cream-100">8:00 AM – 11:30 PM</span>
-            </li>
-            <li class="pt-2 text-xs text-amber-brand">
-              Kitchen closes 30 mins before closing
-            </li>
-          </ul>
-        </div>
-
-        <!-- Visit & Contact -->
-        <div>
-          <h2 class="text-xs font-bold uppercase tracking-wider text-cream-50 mb-4">Visit Us</h2>
-          <address class="not-italic space-y-2 text-xs sm:text-sm text-cream-300">
-            <p>Plot 14, Subhash Marg, C-Scheme</p>
-            <p>Jaipur, Rajasthan 302001</p>
-            <p class="pt-2">
-              <a href="tel:+911412345678" class="text-cream-100 hover:text-amber-brand transition-colors">
-                +91 141 234 5678
-              </a>
-            </p>
-            <p>
-              <a href="mailto:hello@mochacafejaipur.com"
-                class="text-cream-100 hover:text-amber-brand transition-colors">
-                hello@mochacafejaipur.com
-              </a>
-            </p>
-          </address>
-        </div>
-
-      </div>
-
-      <!-- Copyright Bar -->
+  class="min-h-screen bg-[#fbf8f3] text-[#2d211b] font-['DM_Sans',Arial,sans-serif] selection:bg-[#e7c8b5] selection:text-[#39251b]">
+  <header class="sticky top-0 z-20 border-b border-[#e9dfd4] bg-[rgba(251,248,243,0.96)] backdrop-blur-[14px]">
+    <nav
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative flex min-h-[68px] items-center justify-between md:min-h-[78px]">
+      <a class="font-['Playfair_Display',Georgia,serif] text-[30px] font-bold text-[#39251b]"
+        href="index.html">Mocha</a>
+      <input class="peer hidden" id="nav-toggle" type="checkbox" />
+      <label class="flex h-10 w-10 cursor-pointer flex-col items-center justify-center gap-[5px] md:hidden"
+        for="nav-toggle"><span class="block h-[2px] w-[21px] bg-[#39251b]"></span><span
+          class="block h-[2px] w-[21px] bg-[#39251b]"></span><span
+          class="block h-[2px] w-[21px] bg-[#39251b]"></span></label>
       <div
-        class="border-t border-mocha-800 dark:border-dark-border pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream-300">
-        <p>&copy; 2026 Mocha Café &amp; Roastery. All rights reserved.</p>
-        <p class="flex items-center gap-1">
-          Handcrafted with pure HTML &amp; Tailwind CSS &bull; Jaipur, India
+        class="absolute left-0 right-0 top-full hidden flex-col items-stretch gap-[18px] border border-t-0 border-[#e9dfd4] bg-[#fbf8f3] px-[22px] pb-[22px] pt-[18px] text-[13px] font-semibold text-[#786b61] shadow-[0_14px_22px_rgba(40,25,15,0.08)] peer-checked:flex md:static md:flex md:flex-row md:items-center md:gap-[34px] md:border-0 md:bg-transparent md:p-0 md:text-[13px] md:shadow-none">
+        <a class="transition-colors duration-200 hover:text-[#b66f49] text-[#b66f49]" href="index.html">Home</a>
+        <a class="transition-colors duration-200 hover:text-[#b66f49]" href="menu.html">Menu</a>
+        <a class="transition-colors duration-200 hover:text-[#b66f49]" href="gallery.html">Gallery</a>
+        <a class="transition-colors duration-200 hover:text-[#b66f49]" href="contact.html">Contact</a>
+        <a class="inline-flex items-center justify-center gap-3 rounded-[3px] border border-[#79462e] bg-[#79462e] font-bold text-[#fffaf5] transition-[background,border-color,transform] duration-200 hover:-translate-y-px hover:border-[#79462e]-dark hover:bg-[#39251b] min-h-10 px-[18px] text-[11px] w-full md:w-auto"
+          href="contact.html#reserve">Book a table</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="md:pb-[76px] md:pt-[66px] pt-[35px] pb-[48px]">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 items-center gap-[33px] md:grid-cols-[.9fr_1.1fr] md:gap-[70px]">
+        <div class="pb-0 pt-[5px] md:py-5">
+          <span
+            class="inline-flex items-center gap-[9px] border border-[#ead8ca] bg-[#f6eee6] px-3 py-[9px] text-[10px] font-bold uppercase text-[#b66f49]"><span
+              class="h-[6px] w-[6px] rounded-full bg-[#7f9b70]"></span>
+            C-Scheme, Jaipur</span>
+          <h1
+            class="font-['Playfair_Display',Georgia,serif] mb-[17px] mt-[23px] text-[clamp(45px,13vw,64px)] font-semibold md:text-[clamp(48px,5.5vw,72px)]">
+            Good coffee.<br /><em class="font-medium text-[#b66f49]">Slow moments.</em>
+          </h1>
+          <p class="m-0 max-w-[390px] text-[14px] text-[#786b61] md:text-[15px]">
+            Freshly roasted Indian coffee, warm bakes and a sunny courtyard.
+          </p>
+          <div class="mt-[30px] flex flex-wrap items-center gap-6">
+            <a class="inline-flex min-h-[49px] items-center justify-center gap-3 rounded-[3px] border border-[#79462e] bg-[#79462e] px-[23px] text-xs font-bold text-[#fffaf5] transition-[background,border-color,transform] duration-200 hover:-translate-y-px hover:border-[#79462e]-dark hover:bg-[#39251b]"
+              href="menu.html">Explore the menu <span>→</span></a>
+            <a class="inline-flex items-center gap-2 border-b border-[#c7a58e] pb-1 text-xs font-bold text-[#79462e] hover:border-[#b66f49] hover:text-[#b66f49]"
+              href="contact.html#reserve">Reserve a table</a>
+          </div>
+          <div
+            class="mt-[29px] flex flex-wrap gap-3 border-t border-[#e9dfd4] pt-[18px] text-[11px] text-[#786b61] md:mt-[44px] md:gap-5">
+            <span class="before:mr-2 before:text-[#b66f49] before:content-['•']">100% Arabica</span>
+            <span class="before:mr-2 before:text-[#b66f49] before:content-['•']">Roasted in-house</span>
+            <span class="before:mr-2 before:text-[#b66f49] before:content-['•']">Fresh bakes</span>
+          </div>
+        </div>
+        <div class="relative min-w-0">
+          <img alt="Warm café interior with sandstone arches and a coffee bar"
+            class="h-[390px] w-full rounded-[3px] object-cover object-center max-[420px]:h-[330px] md:h-[530px]"
+            height="1000" src="assets/images/hero-jaipur.png" width="900" />
+        </div>
+      </div>
+    </section>
+    <section class="border-y border-[#e9dfd4] bg-[#f5efe7]">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 gap-x-[10px] gap-y-[18px] py-[22px] md:grid-cols-4 md:gap-0">
+        <div
+          class="flex items-center justify-start gap-[11px] text-[11px] font-semibold text-[#39251b] md:justify-center md:text-xs">
+          <span class="text-[19px] text-[#b66f49]">☕</span><span>Specialty coffee</span>
+        </div>
+        <div
+          class="flex items-center justify-start gap-[11px] text-[11px] font-semibold text-[#39251b] md:justify-center md:text-xs">
+          <span class="text-[19px] text-[#b66f49]">◉</span><span>Small-batch roasts</span>
+        </div>
+        <div
+          class="flex items-center justify-start gap-[11px] text-[11px] font-semibold text-[#39251b] md:justify-center md:text-xs">
+          <span class="text-[19px] text-[#b66f49]">🥐</span><span>Freshly baked</span>
+        </div>
+        <div
+          class="flex items-center justify-start gap-[11px] text-[11px] font-semibold text-[#39251b] md:justify-center md:text-xs">
+          <span class="text-[19px] text-[#b66f49]">✳</span><span>Courtyard seating</span>
+        </div>
+      </div>
+    </section>
+    <section class="pb-[64px] pt-[60px] md:pb-[94px] md:pt-[88px]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="mb-[30px] flex flex-col items-start gap-4 md:flex-row md:items-end md:justify-between md:gap-[25px]">
+          <div>
+            <span class="inline-flex items-center gap-[9px] text-[10px] font-bold uppercase text-[#b66f49]">A few
+              favourites</span>
+            <h2
+              class="font-['Playfair_Display',Georgia,serif] mt-2 text-[clamp(30px,3vw,42px)] font-semibold text-[#39251b]">
+              Made for your coffee break.
+            </h2>
+          </div>
+          <a class="inline-flex items-center gap-2 border-b border-[#c7a58e] pb-1 text-xs font-bold text-[#79462e] hover:border-[#b66f49] hover:text-[#b66f49]"
+            href="menu.html">See full menu <span>→</span></a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <article class="group overflow-hidden border border-[#e9dfd4] bg-[#fffdf9]">
+            <img alt="Sea-salt caramel mocha with latte art"
+              class="h-[225px] w-full object-cover object-bottom transition-transform duration-[450ms] group-hover:scale-[1.035] md:h-[235px]"
+              height="520" loading="lazy" src="assets/images/mocha-latte-jaipur.png" width="700" />
+            <div class="flex items-start justify-between gap-3 p-5">
+              <div>
+                <h3 class="font-['Playfair_Display',Georgia,serif] m-0 text-lg font-semibold">
+                  Sea-Salt Caramel Mocha
+                </h3>
+                <p class="mt-[7px] text-xs text-[#786b61]">
+                  Espresso, dark chocolate and caramel.
+                </p>
+              </div>
+              <strong class="whitespace-nowrap text-[13px] text-[#b66f49]">₹260</strong>
+            </div>
+          </article>
+          <article class="group overflow-hidden border border-[#e9dfd4] bg-[#fffdf9]">
+            <img alt="Freshly brewed Chikmagalur V60 coffee"
+              class="h-[225px] w-full object-cover object-bottom transition-transform duration-[450ms] group-hover:scale-[1.035] md:h-[235px]"
+              height="520" loading="lazy" src="assets/images/v60.png" width="700" />
+            <div class="flex items-start justify-between gap-3 p-5">
+              <div>
+                <h3 class="font-['Playfair_Display',Georgia,serif] m-0 text-lg font-semibold">
+                  Chikmagalur V60
+                </h3>
+                <p class="mt-[7px] text-xs text-[#786b61]">
+                  Light, floral and gently sweet.
+                </p>
+              </div>
+              <strong class="whitespace-nowrap text-[13px] text-[#b66f49]">₹230</strong>
+            </div>
+          </article>
+          <article class="group overflow-hidden border border-[#e9dfd4] bg-[#fffdf9]">
+            <img alt="Fresh French butter croissant"
+              class="h-[225px] w-full object-cover object-bottom transition-transform duration-[450ms] group-hover:scale-[1.035] md:h-[235px]"
+              height="520" loading="lazy" src="assets/images/croissant.png" width="700" />
+            <div class="flex items-start justify-between gap-3 p-5">
+              <div>
+                <h3 class="font-['Playfair_Display',Georgia,serif] m-0 text-lg font-semibold">
+                  French Croissant
+                </h3>
+                <p class="mt-[7px] text-xs text-[#786b61]">
+                  Flaky, buttery and baked fresh.
+                </p>
+              </div>
+              <strong class="whitespace-nowrap text-[13px] text-[#b66f49]">₹180</strong>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="bg-[#f0e7dd] py-[55px] md:py-[75px]">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 items-center gap-7 md:grid-cols-[11fr_9fr] md:gap-[80px]">
+        <img alt="Open-air café courtyard with sandstone arches and bougainvillea"
+          class="h-[300px] w-full object-cover md:h-[430px]" height="700" loading="lazy"
+          src="assets/images/courtyard.png" width="900" />
+        <div>
+          <span class="inline-flex items-center gap-[9px] text-[10px] font-bold uppercase text-[#b66f49]">Your Jaipur
+            coffee spot</span>
+          <h2
+            class="font-['Playfair_Display',Georgia,serif] font-semibold text-[#39251b] mt-3 text-[clamp(38px,4vw,54px)]">
+            A little pause<br />in the Pink City.
+          </h2>
+          <p class="mb-[25px] mt-[17px] max-w-[360px] text-sm text-[#786b61]">
+            Settle into our sandstone courtyard for a slow brew, a fresh
+            pastry or a catch-up with friends.
+          </p>
+          <a class="inline-flex min-h-[49px] items-center justify-center gap-3 rounded-[3px] border border-[#79462e] bg-[#79462e] px-[23px] text-xs font-bold text-[#fffaf5] transition-[background,border-color,transform] duration-200 hover:-translate-y-px hover:border-[#79462e]-dark hover:bg-[#39251b]"
+            href="gallery.html">Take a look around <span>→</span></a>
+        </div>
+      </div>
+    </section>
+    <section class="bg-[#39251b] py-[56px] text-[#fffaf5]">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-start justify-between gap-[30px] md:flex-row md:items-center">
+        <div>
+          <span class="inline-flex items-center gap-[9px] text-[10px] font-bold uppercase text-[#d5a184]">Find your way
+            here</span>
+          <h2
+            class="font-['Playfair_Display',Georgia,serif] text-[clamp(30px,3vw,42px)] font-semibold mt-[7px] text-[#fffaf5]">
+            Your table is waiting.
+          </h2>
+          <p class="mt-[10px] text-xs text-[#d4c5ba]">
+            Plot 14, Subhash Marg, C-Scheme, Jaipur
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-[25px]">
+          <a class="inline-flex min-h-[49px] items-center justify-center gap-3 rounded-[3px] border px-[23px] text-xs font-bold transition-[background,border-color,transform] duration-200 hover:-translate-y-px border-[#f7eee4] bg-[#f7eee4] text-[#39251b] hover:border-white hover:bg-white"
+            href="contact.html#reserve">Book a table</a><a
+            class="inline-flex items-center gap-2 border-b pb-1 text-xs font-bold border-[#9c7964] text-[#fffaf5] hover:border-[#e8b998] hover:text-[#e8b998]"
+            href="https://www.google.com/maps/search/?api=1&amp;query=Plot+14%2C+Subhash+Marg%2C+C-Scheme%2C+Jaipur%2C+Rajasthan+302001"
+            target="_blank">Get directions ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-[#2c1d15] pt-[42px] text-[#eee2d7]">
+    <div
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 gap-x-[18px] gap-y-[25px] pb-[34px] sm:grid-cols-2 md:grid-cols-[1.3fr_.7fr_1fr] md:gap-[35px]">
+      <div class="sm:col-span-2 md:col-span-1">
+        <a class="font-['Playfair_Display',Georgia,serif] font-bold inline-block text-[27px] text-[#fffaf5]"
+          href="index.html">Mocha<span class="text-[#b66f49]">.</span></a>
+        <p class="mt-[10px] text-[11px] text-[#bda99b]">
+          Specialty coffee in C-Scheme, Jaipur.
         </p>
       </div>
-
+      <div class="flex flex-col items-start gap-[10px] text-[11px] text-[#d7c7bb]">
+        <a class="focus-visible:outline-2 transition-colors duration-200 hover:text-[#e5b18f]"
+          href="menu.html">Menu</a><a
+          class="focus-visible:outline-2 transition-colors duration-200 hover:text-[#e5b18f]"
+          href="gallery.html">Gallery</a><a
+          class="focus-visible:outline-2 transition-colors duration-200 hover:text-[#e5b18f]"
+          href="contact.html">Contact</a>
+      </div>
+      <div class="flex flex-col items-start gap-[10px] text-[11px] text-[#d7c7bb]">
+        <a class="focus-visible:outline-2 transition-colors duration-200 hover:text-[#e5b18f]"
+          href="tel:+911412345678">+91 141 234 5678</a><a
+          class="focus-visible:outline-2 transition-colors duration-200 hover:text-[#e5b18f]"
+          href="mailto:hello@mochacafejaipur.com">hello@mochacafejaipur.com</a>
+      </div>
+    </div>
+    <div
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between gap-[15px] border-t border-white/10 pb-[17px] pt-[15px] text-[9px] text-[#a99587] min-[421px]:flex-row">
+      <span>© 2026 Mocha Café &amp; Roastery</span><span>Made for slow coffee days.</span>
     </div>
   </footer>
-
 </body>
 
 </html>

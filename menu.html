@@ -1,705 +1,398 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Explore the artisanal coffee and bakery menu at Mocha Café & Roastery, Jaipur. Single-origin coffees, pour-overs, croissants, and take-home beans.">
-  <title>Menu & Roastery Pricing | Mocha Café Jaipur</title>
-  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
-  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="Explore coffee, bakery treats and take-home roasts at Mocha Café &amp; Roastery, Jaipur."
+    name="description" />
+  <title>Menu | Mocha Café &amp; Roastery</title>
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
-  <!-- Tailwind CSS CDN -->
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap"
+    rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'media', // automatic dark mode based on prefers-color-scheme
-      theme: {
-        extend: {
-          colors: {
-            mocha: {
-              50: '#FDF8F5',
-              100: '#F7EDE6',
-              200: '#EAD5C7',
-              300: '#DCBCA8',
-              400: '#C59374',
-              500: '#A46B47',
-              600: '#855032',
-              700: '#683C25',
-              800: '#4A2A1A',
-              900: '#2C1810',
-              950: '#1A0E0A',
-            },
-            amber: {
-              brand: '#C67C4E',
-              hover: '#A36035',
-              light: '#F5EBE1',
-            },
-            cream: {
-              50: '#FFFEFA',
-              100: '#FDFBF7',
-              200: '#F7F3EB',
-              300: '#EFE8DC',
-            },
-            dark: {
-              bg: '#140E0A',
-              surface: '#1F1713',
-              card: '#291E18',
-              border: '#3D2D24',
-            }
-          },
-          fontFamily: {
-            serif: ['"Playfair Display"', 'Georgia', 'serif'],
-            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
-          }
-        }
-      }
-    };
-  </script>
-
-  <!-- Custom CSS for accessibility & baseline rules -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
 </head>
 
 <body
-  class="bg-cream-100 text-mocha-900 dark:bg-dark-bg dark:text-cream-100 font-sans antialiased transition-colors duration-300 min-h-screen flex flex-col">
-
-  <!-- ==================== HEADER & NAVIGATION ==================== -->
-  <header
-    class="sticky top-0 z-50 bg-cream-100/95 dark:bg-dark-bg/95 backdrop-blur-md border-b border-cream-300 dark:border-dark-border">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <nav class="flex items-center justify-between h-20" aria-label="Main Navigation">
-
-        <!-- Logo -->
-        <a href="index.html"
-          class="group focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand rounded-lg">
-          <span
-            class="text-2xl sm:text-3xl font-serif font-bold tracking-tight text-mocha-900 dark:text-cream-100 group-hover:text-amber-brand transition-colors">
-            Mocha<span class="text-amber-brand">.</span>
-          </span>
-        </a>
-
-        <!-- Pure CSS Mobile Toggle (Zero JS) -->
-        <input type="checkbox" id="nav-toggle" class="peer hidden" aria-label="Toggle navigation menu">
-        <label for="nav-toggle"
-          class="md:hidden p-2 rounded-lg text-mocha-800 dark:text-cream-200 hover:bg-cream-200 dark:hover:bg-dark-card cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-brand"
-          aria-label="Open navigation menu">
-          <svg class="w-6 h-6 peer-checked:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-            aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </label>
-
-        <!-- Navigation Links Menu -->
-        <div
-          class="hidden peer-checked:flex md:flex flex-col md:flex-row absolute md:static top-full left-0 right-0 bg-cream-100 dark:bg-dark-surface md:bg-transparent md:dark:bg-transparent border-b md:border-b-0 border-cream-300 dark:border-dark-border p-6 md:p-0 items-center gap-4 md:gap-8 shadow-xl md:shadow-none transition-all">
-          <ul class="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-sm font-medium w-full md:w-auto">
-            <li>
-              <a href="index.html"
-                class="text-mocha-700 dark:text-cream-200 hover:text-amber-brand dark:hover:text-amber-brand transition-colors block py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand rounded">Home</a>
-            </li>
-            <li>
-              <a href="menu.html"
-                class="text-amber-brand font-semibold hover:text-amber-hover transition-colors block py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand rounded"
-                aria-current="page">Menu</a>
-            </li>
-            <li>
-              <a href="gallery.html"
-                class="text-mocha-700 dark:text-cream-200 hover:text-amber-brand dark:hover:text-amber-brand transition-colors block py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand rounded">Gallery</a>
-            </li>
-            <li>
-              <a href="contact.html"
-                class="text-mocha-700 dark:text-cream-200 hover:text-amber-brand dark:hover:text-amber-brand transition-colors block py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand rounded">Contact</a>
-            </li>
-          </ul>
-
-          <!-- Call to Action Button -->
-          <a href="contact.html#reserve"
-            class="w-full md:w-auto text-center inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-amber-brand hover:bg-amber-hover text-white shadow-sm hover:shadow-md transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand focus-visible:ring-offset-2">
-            Book a Table
-          </a>
-        </div>
-
-      </nav>
-    </div>
-  </header>
-
-  <!-- ==================== MAIN CONTENT ==================== -->
-  <main class="flex-grow">
-
-    <!-- Page Intro Header -->
-    <section
-      class="py-12 sm:py-16 bg-cream-50 dark:bg-dark-surface/60 border-b border-cream-300 dark:border-dark-border text-center">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <span
-          class="inline-block px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-amber-light text-amber-hover dark:bg-dark-card dark:text-amber-brand border border-amber-brand/20 mb-4">
-          C-Scheme, Jaipur &bull; Fresh Roasted Daily
-        </span>
-        <!-- Single h1 for this page -->
-        <h1 class="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-mocha-900 dark:text-cream-100">
-          Artisan Menu &amp; Roastery Pricing
-        </h1>
-        <p class="mt-4 text-sm sm:text-base text-mocha-600 dark:text-cream-300 max-w-2xl mx-auto leading-relaxed">
-          From single-origin hand brews to slow-laminated French pastries. Sourced responsibly and prepared with
-          scientific precision.
-        </p>
-
-        <!-- Quick Anchor Filter Links -->
-        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-8">
-          <a href="#espresso-bar"
-            class="px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-dark-card border border-cream-300 dark:border-dark-border text-mocha-800 dark:text-cream-200 hover:border-amber-brand hover:text-amber-brand transition-colors">
-            Espresso Bar
-          </a>
-          <a href="#slow-bar"
-            class="px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-dark-card border border-cream-300 dark:border-dark-border text-mocha-800 dark:text-cream-200 hover:border-amber-brand hover:text-amber-brand transition-colors">
-            Manual Brews &amp; Cold
-          </a>
-          <a href="#bakery"
-            class="px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-dark-card border border-cream-300 dark:border-dark-border text-mocha-800 dark:text-cream-200 hover:border-amber-brand hover:text-amber-brand transition-colors">
-            Artisan Bakery
-          </a>
-          <a href="#beans-pricing"
-            class="px-4 py-2 rounded-full text-xs font-semibold bg-amber-brand text-white hover:bg-amber-hover transition-colors">
-            Take-Home Beans
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 1: ESPRESSO BAR (CSS GRID) -->
-    <section id="espresso-bar"
-      class="py-14 sm:py-18 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-cream-300 dark:border-dark-border">
-      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-2">
-        <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-amber-brand">Calibrated Extractions</span>
-          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-mocha-900 dark:text-cream-100 mt-1">
-            Espresso &amp; Handcrafted Milk Coffees
-          </h2>
-        </div>
-        <p class="text-xs text-mocha-500 dark:text-cream-300">Oat, Almond &amp; Soy Milk available (+&#8377;40)</p>
-      </div>
-
-      <!-- CSS Grid: 3 columns on desktop, 2 on tablet, 1 on mobile -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-
-        <!-- Menu Item 1 -->
-        <article
-          class="bg-white dark:bg-dark-card rounded-2xl border border-cream-300 dark:border-dark-border p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between">
-          <div>
-            <div class="h-48 rounded-xl overflow-hidden mb-4 bg-mocha-800">
-              <img src="assets/images/mocha-latte-jaipur.png"
-                alt="Handcrafted Sea-Salt Caramel Mocha in Jaipur terracotta ceramic cup with latte art"
-                class="w-full h-full object-cover object-bottom" loading="lazy" width="600" height="320">
-            </div>
-            <div class="flex items-start justify-between gap-2">
-              <h3 class="font-serif text-lg font-bold text-mocha-900 dark:text-cream-100">Sea-Salt Caramel Mocha</h3>
-              <span class="font-bold text-amber-brand text-base shrink-0">&#8377;260</span>
-            </div>
-            <p class="text-xs text-mocha-600 dark:text-cream-300 mt-2 leading-relaxed">
-              Double espresso shot, single-origin Belgian dark chocolate, salted caramel drizzle, and steamed whole
-              milk.
-            </p>
-          </div>
-          <div
-            class="flex items-center gap-2 mt-4 pt-3 border-t border-cream-200 dark:border-dark-border text-[11px] font-medium text-mocha-500 dark:text-cream-300">
-            <span
-              class="px-2 py-0.5 rounded bg-amber-light text-amber-hover dark:bg-dark-surface dark:text-amber-brand">Signature</span>
-            <span>Hot or Iced</span>
-          </div>
-        </article>
-
-        <!-- Menu Item 2 -->
-        <article
-          class="bg-white dark:bg-dark-card rounded-2xl border border-cream-300 dark:border-dark-border p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between">
-          <div>
-            <div class="h-48 rounded-xl overflow-hidden mb-4 bg-mocha-800">
-              <img src="assets/images/spanish-cortado.png" alt="Spanish Cortado prepared at Mocha Jaipur espresso bar"
-                class="w-full h-full object-cover object-bottom" loading="lazy" width="600" height="320">
-            </div>
-            <div class="flex items-start justify-between gap-2">
-              <h3 class="font-serif text-lg font-bold text-mocha-900 dark:text-cream-100">Spanish Cortado</h3>
-              <span class="font-bold text-amber-brand text-base shrink-0">&#8377;220</span>
-            </div>
-            <p class="text-xs text-mocha-600 dark:text-cream-300 mt-2 leading-relaxed">
-              Equal parts rich espresso and textured warm milk with subtle sweetness from condensed milk.
-            </p>
-          </div>
-          <div
-            class="flex items-center gap-2 mt-4 pt-3 border-t border-cream-200 dark:border-dark-border text-[11px] font-medium text-mocha-500 dark:text-cream-300">
-            <span
-              class="px-2 py-0.5 rounded bg-cream-200 dark:bg-dark-surface text-mocha-700 dark:text-cream-200">Balanced</span>
-            <span>150ml</span>
-          </div>
-        </article>
-
-        <!-- Menu Item 3 -->
-        <article
-          class="bg-white dark:bg-dark-card rounded-2xl border border-cream-300 dark:border-dark-border p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between">
-          <div>
-            <div class="h-48 rounded-xl overflow-hidden mb-4 bg-mocha-800">
-              <img src="assets/images/classic-flat-white.png"
-                alt="Classic Flat White served at evening courtyard table in Mocha Jaipur"
-                class="w-full h-full object-cover object-bottom" loading="lazy" width="600" height="320">
-            </div>
-            <div class="flex items-start justify-between gap-2">
-              <h3 class="font-serif text-lg font-bold text-mocha-900 dark:text-cream-100">Classic Flat White</h3>
-              <span class="font-bold text-amber-brand text-base shrink-0">&#8377;210</span>
-            </div>
-            <p class="text-xs text-mocha-600 dark:text-cream-300 mt-2 leading-relaxed">
-              Double ristretto topped with glossy micro-foamed milk, delivering deep cocoa and toasted almond notes.
-            </p>
-          </div>
-          <div
-            class="flex items-center gap-2 mt-4 pt-3 border-t border-cream-200 dark:border-dark-border text-[11px] font-medium text-mocha-500 dark:text-cream-300">
-            <span
-              class="px-2 py-0.5 rounded bg-cream-200 dark:bg-dark-surface text-mocha-700 dark:text-cream-200">Favorite</span>
-            <span>200ml</span>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- SECTION 2: MANUAL BREWS & COLD BAR (CSS GRID) -->
-    <section id="slow-bar"
-      class="py-14 sm:py-18 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-cream-300 dark:border-dark-border">
-      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-2">
-        <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-amber-brand">Slow Extraction</span>
-          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-mocha-900 dark:text-cream-100 mt-1">
-            Manual Pour-Overs &amp; Cold Brew Bar
-          </h2>
-        </div>
-        <p class="text-xs text-mocha-500 dark:text-cream-300">Choice of V60, Aeropress, or Chemex</p>
-      </div>
-
-      <!-- CSS Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-
-        <!-- Item 4 -->
-        <article
-          class="bg-white dark:bg-dark-card rounded-2xl border border-cream-300 dark:border-dark-border p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between">
-          <div>
-            <div class="h-48 rounded-xl overflow-hidden mb-4 bg-mocha-800">
-              <img src="assets/images/v60.png" alt="Single-origin V60 pour-over manual extraction in Jaipur brew lab"
-                class="w-full h-full object-cover object-bottom" loading="lazy" width="600" height="320">
-            </div>
-            <div class="flex items-start justify-between gap-2">
-              <h3 class="font-serif text-lg font-bold text-mocha-900 dark:text-cream-100">Chikmagalur V60 Pour-Over</h3>
-              <span class="font-bold text-amber-brand text-base shrink-0">&#8377;230</span>
-            </div>
-            <p class="text-xs text-mocha-600 dark:text-cream-300 mt-2 leading-relaxed">
-              Light roasted washed Arabica. Delicate notes of jasmine, orange blossom, and a clean sugarcane sweetness.
-            </p>
-          </div>
-          <div
-            class="flex items-center gap-2 mt-4 pt-3 border-t border-cream-200 dark:border-dark-border text-[11px] font-medium text-mocha-500 dark:text-cream-300">
-            <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">Single
-              Origin</span>
-            <span>240ml</span>
-          </div>
-        </article>
-
-        <!-- Item 5 -->
-        <article
-          class="bg-white dark:bg-dark-card rounded-2xl border border-cream-300 dark:border-dark-border p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between">
-          <div>
-            <div class="h-48 rounded-xl overflow-hidden mb-4 bg-mocha-800">
-              <img src="assets/images/coldbrew.png"
-                alt="18-Hour Reserve Cold Brew over clear ice on sunlit Jaipur patio table"
-                class="w-full h-full object-cover object-bottom" loading="lazy" width="600" height="320">
-            </div>
-            <div class="flex items-start justify-between gap-2">
-              <h3 class="font-serif text-lg font-bold text-mocha-900 dark:text-cream-100">18-Hour Reserve Cold Brew</h3>
-              <span class="font-bold text-amber-brand text-base shrink-0">&#8377;220</span>
-            </div>
-            <p class="text-xs text-mocha-600 dark:text-cream-300 mt-2 leading-relaxed">
-              Steeped cold for 18 hours. Ultra-smooth profile with zero bitterness, distinct hints of dark berries and
-              cacao nibs.
-            </p>
-          </div>
-          <div
-            class="flex items-center gap-2 mt-4 pt-3 border-t border-cream-200 dark:border-dark-border text-[11px] font-medium text-mocha-500 dark:text-cream-300">
-            <span
-              class="px-2 py-0.5 rounded bg-amber-light text-amber-hover dark:bg-dark-surface dark:text-amber-brand">House
-              Favorite</span>
-            <span>Over Clear Ice</span>
-          </div>
-        </article>
-
-        <!-- Item 6 -->
-        <article
-          class="bg-white dark:bg-dark-card rounded-2xl border border-cream-300 dark:border-dark-border p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between">
-          <div>
-            <div class="h-48 rounded-xl overflow-hidden mb-4 bg-mocha-800">
-              <img src="assets/images/tonic.png" alt="Citrus Espresso Tonic served on outdoor courtyard table in Jaipur"
-                class="w-full h-full object-cover object-bottom" loading="lazy" width="600" height="320">
-            </div>
-            <div class="flex items-start justify-between gap-2">
-              <h3 class="font-serif text-lg font-bold text-mocha-900 dark:text-cream-100">Citrus Espresso Tonic</h3>
-              <span class="font-bold text-amber-brand text-base shrink-0">&#8377;250</span>
-            </div>
-            <p class="text-xs text-mocha-600 dark:text-cream-300 mt-2 leading-relaxed">
-              Fever-Tree Mediterranean tonic water layered with fresh double espresso shot, kaffir lime, and fresh
-              rosemary sprig.
-            </p>
-          </div>
-          <div
-            class="flex items-center gap-2 mt-4 pt-3 border-t border-cream-200 dark:border-dark-border text-[11px] font-medium text-mocha-500 dark:text-cream-300">
-            <span
-              class="px-2 py-0.5 rounded bg-cream-200 dark:bg-dark-surface text-mocha-700 dark:text-cream-200">Refreshing</span>
-            <span>Sparkling</span>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- SECTION 3: ARTISAN BAKERY (CSS GRID) -->
-    <section id="bakery"
-      class="py-14 sm:py-18 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-cream-300 dark:border-dark-border">
-      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-2">
-        <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-amber-brand">Oven Fresh Daily</span>
-          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-mocha-900 dark:text-cream-100 mt-1">
-            Artisan Bakery &amp; Morning Treats
-          </h2>
-        </div>
-        <p class="text-xs text-mocha-500 dark:text-cream-300">Baked at 7:00 AM every morning</p>
-      </div>
-
-      <!-- CSS Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-
-        <!-- Bakery 1 -->
-        <article
-          class="bg-white dark:bg-dark-card rounded-2xl border border-cream-300 dark:border-dark-border p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between">
-          <div>
-            <div class="h-48 rounded-xl overflow-hidden mb-4 bg-mocha-800">
-              <img src="assets/images/croissant.png"
-                alt="Golden buttery French croissant freshly baked at Mocha Jaipur artisan bakery"
-                class="w-full h-full object-cover object-bottom" loading="lazy" width="600" height="320">
-            </div>
-            <div class="flex items-start justify-between gap-2">
-              <h3 class="font-serif text-lg font-bold text-mocha-900 dark:text-cream-100">Classic French Croissant</h3>
-              <span class="font-bold text-amber-brand text-base shrink-0">&#8377;180</span>
-            </div>
-            <p class="text-xs text-mocha-600 dark:text-cream-300 mt-2 leading-relaxed">
-              Traditional 72-layer laminated pastry made with pure Normandy cultured butter, flaky exterior, and airy
-              honeycomb crumb.
-            </p>
-          </div>
-          <div
-            class="flex items-center gap-2 mt-4 pt-3 border-t border-cream-200 dark:border-dark-border text-[11px] font-medium text-mocha-500 dark:text-cream-300">
-            <span
-              class="px-2 py-0.5 rounded bg-amber-light text-amber-hover dark:bg-dark-surface dark:text-amber-brand">Vegetarian</span>
-            <span>Warm on request</span>
-          </div>
-        </article>
-
-        <!-- Bakery 2 -->
-        <article
-          class="bg-white dark:bg-dark-card rounded-2xl border border-cream-300 dark:border-dark-border p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between">
-          <div>
-            <div class="h-48 rounded-xl overflow-hidden mb-4 bg-mocha-800">
-              <img src="assets/images/almond-pain-chocolat.png"
-                alt="Almond Pain au Chocolat and Jaipur rose cruffins displayed on wooden board"
-                class="w-full h-full object-cover object-bottom" loading="lazy" width="600" height="320">
-            </div>
-            <div class="flex items-start justify-between gap-2">
-              <h3 class="font-serif text-lg font-bold text-mocha-900 dark:text-cream-100">Almond Pain au Chocolat</h3>
-              <span class="font-bold text-amber-brand text-base shrink-0">&#8377;230</span>
-            </div>
-            <p class="text-xs text-mocha-600 dark:text-cream-300 mt-2 leading-relaxed">
-              Twice-baked with rich frangipane almond cream, filled with two batons of Valrhona dark chocolate and
-              toasted almonds.
-            </p>
-          </div>
-          <div
-            class="flex items-center gap-2 mt-4 pt-3 border-t border-cream-200 dark:border-dark-border text-[11px] font-medium text-mocha-500 dark:text-cream-300">
-            <span class="px-2 py-0.5 rounded bg-cream-200 dark:bg-dark-surface text-mocha-700 dark:text-cream-200">Chef
-              Special</span>
-            <span>Contains Nuts</span>
-          </div>
-        </article>
-
-        <!-- Bakery 3 -->
-        <article
-          class="bg-white dark:bg-dark-card rounded-2xl border border-cream-300 dark:border-dark-border p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between">
-          <div>
-            <div class="h-48 rounded-xl overflow-hidden mb-4 bg-mocha-800">
-              <img src="assets/images/avocado-sourdough.png"
-                alt="Avocado sourdough toast on sunlit Jaipur courtyard table"
-                class="w-full h-full object-cover object-bottom" loading="lazy" width="600" height="320">
-            </div>
-            <div class="flex items-start justify-between gap-2">
-              <h3 class="font-serif text-lg font-bold text-mocha-900 dark:text-cream-100">Avocado &amp; Feta Sourdough
-              </h3>
-              <span class="font-bold text-amber-brand text-base shrink-0">&#8377;290</span>
-            </div>
-            <p class="text-xs text-mocha-600 dark:text-cream-300 mt-2 leading-relaxed">
-              Freshly toasted country sourdough loaf topped with Hass avocado, crumbled goat feta, heirloom cherry
-              tomatoes, and chilli flakes.
-            </p>
-          </div>
-          <div
-            class="flex items-center gap-2 mt-4 pt-3 border-t border-cream-200 dark:border-dark-border text-[11px] font-medium text-mocha-500 dark:text-cream-300">
-            <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">Nutritious</span>
-            <span>Sourdough Bakery</span>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- SECTION 4: PRICING TABLE FOR TAKE-HOME BEANS (DOMAIN MUST-HAVE) -->
-    <!-- Rubric requirement: "Pricing table or service cards" -->
-    <section id="beans-pricing" class="py-16 sm:py-20 bg-cream-50 dark:bg-dark-surface/40">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-          <span class="text-xs font-bold uppercase tracking-widest text-amber-brand">Take Mocha Home</span>
-          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-mocha-900 dark:text-cream-100 mt-2">
-            Whole Bean Roastery Packs &amp; Pricing
-          </h2>
-          <p class="text-mocha-600 dark:text-cream-300 text-sm sm:text-base mt-3">
-            Choose your roast profile. We can grind it for espresso, moka pot, aeropress, or pour-over at no extra
-            charge.
-          </p>
-        </div>
-
-        <!-- 3-Column Pricing Cards Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
-
-          <!-- Pricing Tier 1 -->
-          <article
-            class="bg-white dark:bg-dark-card rounded-3xl p-8 border border-cream-300 dark:border-dark-border shadow-sm flex flex-col justify-between">
-            <div>
-              <span class="text-xs font-bold uppercase tracking-wider text-mocha-500 dark:text-cream-300">Daily House
-                Roast</span>
-              <h3 class="font-serif text-2xl font-bold text-mocha-900 dark:text-cream-100 mt-1">Jaipur Morning Blend
-              </h3>
-              <p class="text-xs text-mocha-600 dark:text-cream-300 mt-2">Smooth, medium roast for everyday filter or
-                milk coffees.</p>
-
-              <div class="mt-6 py-4 border-y border-cream-200 dark:border-dark-border flex items-baseline gap-1">
-                <span class="font-serif text-4xl font-bold text-mocha-900 dark:text-cream-100">&#8377;520</span>
-                <span class="text-xs text-mocha-500 dark:text-cream-300">/ 250g bag</span>
-              </div>
-
-              <ul class="mt-6 space-y-3 text-xs text-mocha-700 dark:text-cream-200">
-                <li class="flex items-center gap-2">
-                  <span class="text-amber-brand font-bold">&#10003;</span> 100% Karnataka Arabica
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="text-amber-brand font-bold">&#10003;</span> Tasting notes: Cocoa, Hazelnut, Brown Sugar
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="text-amber-brand font-bold">&#10003;</span> Nitrogen flushed valve pouch
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="text-amber-brand font-bold">&#10003;</span> Complimentary custom grind
-                </li>
-              </ul>
-            </div>
-
-            <div class="mt-8 pt-4">
-              <a href="contact.html#reserve"
-                class="w-full inline-flex items-center justify-center px-5 py-3 rounded-xl text-xs font-bold uppercase tracking-wider border-2 border-mocha-800 text-mocha-800 dark:border-cream-300 dark:text-cream-100 hover:bg-mocha-800 hover:text-white dark:hover:bg-cream-100 dark:hover:text-mocha-900 transition-all text-center focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand">
-                Order for Pickup
-              </a>
-            </div>
-          </article>
-
-          <!-- Pricing Tier 2 (Featured / Most Popular) -->
-          <article
-            class="bg-mocha-900 text-cream-100 dark:bg-dark-card rounded-3xl p-8 border-2 border-amber-brand shadow-xl relative flex flex-col justify-between">
-            <div
-              class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-amber-brand text-white text-[11px] font-bold uppercase tracking-widest px-4 py-1 rounded-full shadow-md">
-              Most Popular
-            </div>
-
-            <div>
-              <span class="text-xs font-bold uppercase tracking-wider text-amber-brand">Estate Reserve</span>
-              <h3 class="font-serif text-2xl font-bold text-cream-50 mt-1">Chikmagalur Honey Micro-Lot</h3>
-              <p class="text-xs text-cream-300 mt-2">Light-medium roast, harvested from 1,300m elevation shade
-                plantations.</p>
-
-              <div class="mt-6 py-4 border-y border-mocha-800 dark:border-dark-border flex items-baseline gap-1">
-                <span class="font-serif text-4xl font-bold text-cream-50">&#8377;680</span>
-                <span class="text-xs text-cream-300">/ 250g bag</span>
-              </div>
-
-              <ul class="mt-6 space-y-3 text-xs text-cream-200">
-                <li class="flex items-center gap-2">
-                  <span class="text-amber-brand font-bold">&#10003;</span> Single-Estate Honey Processed
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="text-amber-brand font-bold">&#10003;</span> Tasting notes: Orange Blossom, Honey, Dried
-                  Fig
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="text-amber-brand font-bold">&#10003;</span> SCA Cup Score: 87.5
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="text-amber-brand font-bold">&#10003;</span> Roasted to order weekly
-                </li>
-              </ul>
-            </div>
-
-            <div class="mt-8 pt-4">
-              <a href="contact.html#reserve"
-                class="w-full inline-flex items-center justify-center px-5 py-3 rounded-xl text-xs font-bold uppercase tracking-wider bg-amber-brand hover:bg-amber-hover text-white transition-all text-center shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand">
-                Order for Pickup
-              </a>
-            </div>
-          </article>
-
-          <!-- Pricing Tier 3 -->
-          <article
-            class="bg-white dark:bg-dark-card rounded-3xl p-8 border border-cream-300 dark:border-dark-border shadow-sm flex flex-col justify-between">
-            <div>
-              <span class="text-xs font-bold uppercase tracking-wider text-mocha-500 dark:text-cream-300">Tasting
-                Experience</span>
-              <h3 class="font-serif text-2xl font-bold text-mocha-900 dark:text-cream-100 mt-1">Roaster's Tasting Box
-              </h3>
-              <p class="text-xs text-mocha-600 dark:text-cream-300 mt-2">Curated flight of 3 distinct Indian roasts for
-                true enthusiasts.</p>
-
-              <div class="mt-6 py-4 border-y border-cream-200 dark:border-dark-border flex items-baseline gap-1">
-                <span class="font-serif text-4xl font-bold text-mocha-900 dark:text-cream-100">&#8377;1,250</span>
-                <span class="text-xs text-mocha-500 dark:text-cream-300">/ 3 &times; 150g pack</span>
-              </div>
-
-              <ul class="mt-6 space-y-3 text-xs text-mocha-700 dark:text-cream-200">
-                <li class="flex items-center gap-2">
-                  <span class="text-amber-brand font-bold">&#10003;</span> 3 curated micro-lot coffees
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="text-amber-brand font-bold">&#10003;</span> Tasting notebook &amp; brew recipe cards
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="text-amber-brand font-bold">&#10003;</span> 1 free in-cafe pour-over voucher
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="text-amber-brand font-bold">&#10003;</span> Premium gift packaging included
-                </li>
-              </ul>
-            </div>
-
-            <div class="mt-8 pt-4">
-              <a href="contact.html#reserve"
-                class="w-full inline-flex items-center justify-center px-5 py-3 rounded-xl text-xs font-bold uppercase tracking-wider border-2 border-mocha-800 text-mocha-800 dark:border-cream-300 dark:text-cream-100 hover:bg-mocha-800 hover:text-white dark:hover:bg-cream-100 dark:hover:text-mocha-900 transition-all text-center focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand">
-                Order for Pickup
-              </a>
-            </div>
-          </article>
-
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ==================== FOOTER ==================== -->
-  <footer
-    class="bg-mocha-900 text-cream-200 dark:bg-dark-surface dark:text-cream-200 border-t border-mocha-800 dark:border-dark-border mt-auto">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-
-      <!-- Footer Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-
-        <!-- Brand Summary -->
-        <div class="space-y-4">
-          <span class="font-serif text-2xl font-bold tracking-tight text-cream-50">
-            Mocha<span class="text-amber-brand">.</span>
-          </span>
-          <p class="text-xs sm:text-sm text-cream-300 leading-relaxed">
-            Artisanal coffee roastery and slow-brew café nestled in C-Scheme, Jaipur. Fresh roasts, handcrafted
-            beverages, and European pastries.
-          </p>
-          <p class="text-xs text-amber-brand font-medium">
-            &bull; Fresh Roasts Daily
-          </p>
-        </div>
-
-        <!-- Quick Links -->
-        <div>
-          <h2 class="text-xs font-bold uppercase tracking-wider text-cream-50 mb-4">Quick Links</h2>
-          <ul class="space-y-2 text-sm text-cream-300">
-            <li><a href="index.html"
-                class="hover:text-amber-brand transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-brand">Home</a>
-            </li>
-            <li><a href="menu.html"
-                class="hover:text-amber-brand transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-brand">Our
-                Menu</a></li>
-            <li><a href="gallery.html"
-                class="hover:text-amber-brand transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-brand">Café
-                Gallery</a></li>
-            <li><a href="contact.html"
-                class="hover:text-amber-brand transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-brand">Contact
-                &amp; Reserve</a></li>
-          </ul>
-        </div>
-
-        <!-- Business Hours -->
-        <div>
-          <h2 class="text-xs font-bold uppercase tracking-wider text-cream-50 mb-4">Opening Hours</h2>
-          <ul class="space-y-2 text-xs sm:text-sm text-cream-300">
-            <li class="flex justify-between">
-              <span>Monday – Friday:</span>
-              <span class="font-medium text-cream-100">8:00 AM – 11:00 PM</span>
-            </li>
-            <li class="flex justify-between">
-              <span>Saturday – Sunday:</span>
-              <span class="font-medium text-cream-100">8:00 AM – 11:30 PM</span>
-            </li>
-            <li class="pt-2 text-xs text-amber-brand">
-              Kitchen closes 30 mins before closing
-            </li>
-          </ul>
-        </div>
-
-        <!-- Visit & Contact -->
-        <div>
-          <h2 class="text-xs font-bold uppercase tracking-wider text-cream-50 mb-4">Visit Us</h2>
-          <address class="not-italic space-y-2 text-xs sm:text-sm text-cream-300">
-            <p>Plot 14, Subhash Marg, C-Scheme</p>
-            <p>Jaipur, Rajasthan 302001</p>
-            <p class="pt-2">
-              <a href="tel:+911412345678" class="text-cream-100 hover:text-amber-brand transition-colors">
-                +91 141 234 5678
-              </a>
-            </p>
-            <p>
-              <a href="mailto:hello@mochacafejaipur.com"
-                class="text-cream-100 hover:text-amber-brand transition-colors">
-                hello@mochacafejaipur.com
-              </a>
-            </p>
-          </address>
-        </div>
-
-      </div>
-
-      <!-- Copyright Bar -->
+  class="min-h-screen bg-[#fbf8f3] text-[#2d211b] font-['DM_Sans',Arial,sans-serif] antialiased selection:bg-[#e7c8b5] selection:text-[#39251b]">
+  <header class="sticky top-0 z-20 border-b border-[#e9dfd4] bg-[rgba(251,248,243,0.96)] backdrop-blur-[14px]">
+    <nav
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative flex min-h-[68px] items-center justify-between md:min-h-[78px]">
+      <a class="font-['Playfair_Display',Georgia,serif] text-[30px] leading-none font-bold tracking-[-.06em] text-[#39251b]"
+        href="index.html">Mocha<span class="text-[#b66f49]">.</span></a>
+      <input class="peer sr-only" id="nav-toggle" type="checkbox" /><label
+        class="flex h-10 w-10 cursor-pointer flex-col items-center justify-center gap-[5px] md:hidden peer-focus-visible:outline-2 peer-focus-visible:outline-terracotta peer-focus-visible:outline-offset-[3px]"
+        for="nav-toggle"><span class="block h-[2px] w-[21px] bg-[#39251b]"></span><span
+          class="block h-[2px] w-[21px] bg-[#39251b]"></span><span
+          class="block h-[2px] w-[21px] bg-[#39251b]"></span></label>
       <div
-        class="border-t border-mocha-800 dark:border-dark-border pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream-300">
-        <p>&copy; 2026 Mocha Café &amp; Roastery. All rights reserved.</p>
-        <p class="flex items-center gap-1">
-          Handcrafted with pure HTML &amp; Tailwind CSS &bull; Jaipur, India
+        class="absolute left-0 right-0 top-full hidden flex-col items-stretch gap-[18px] border border-t-0 border-[#e9dfd4] bg-[#fbf8f3] px-[22px] pb-[22px] pt-[18px] text-[13px] font-semibold text-[#786b61] shadow-[0_14px_22px_rgba(40,25,15,0.08)] peer-checked:flex md:static md:flex md:flex-row md:items-center md:gap-[34px] md:border-0 md:bg-transparent md:p-0 md:text-[13px] md:shadow-none">
+        <a class="transition-colors duration-200 hover:text-[#b66f49]" href="index.html">Home</a><a
+          class="transition-colors duration-200 hover:text-[#b66f49] text-[#b66f49]" href="menu.html">Menu</a><a
+          class="transition-colors duration-200 hover:text-[#b66f49]" href="gallery.html">Gallery</a><a
+          class="transition-colors duration-200 hover:text-[#b66f49]" href="contact.html">Contact</a><a
+          class="inline-flex items-center justify-center gap-3 rounded-[3px] border border-[#79462e] bg-[#79462e] font-bold tracking-[.025em] text-[#fffaf5] transition-[background,border-color,transform] duration-200 hover:-translate-y-px hover:border-[#79462e]-dark hover:bg-[#39251b] min-h-10 px-[18px] text-[11px] w-full md:w-auto"
+          href="contact.html#reserve">Book a table</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="px-0 pb-[37px] pt-[54px] text-center md:pb-[48px] md:pt-[75px]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <span
+          class="inline-flex items-center gap-[9px] text-[10px] font-bold uppercase tracking-[.16em] text-[#b66f49]">C-Scheme,
+          Jaipur · Fresh every day</span>
+        <h1
+          class="font-['Playfair_Display',Georgia,serif] mb-[10px] mt-[13px] text-[clamp(42px,5vw,60px)] font-semibold leading-[1.1] tracking-[-.045em] text-[#39251b]">
+          Good things, on the menu.
+        </h1>
+        <p class="m-0 text-sm text-[#786b61]">
+          Coffee, bakes and beans to take home.
+        </p>
+        <nav class="mt-7 flex flex-wrap justify-center gap-[9px]">
+          <a class="focus-visible:outline-2 border border-[#e9dfd4] bg-[#fffdf9] px-[14px] py-[9px] text-[11px] font-semibold text-[#79462e] transition-colors duration-200 hover:border-[#b66f49] hover:text-[#b66f49]"
+            href="#espresso">Coffee</a><a
+            class="focus-visible:outline-2 border border-[#e9dfd4] bg-[#fffdf9] px-[14px] py-[9px] text-[11px] font-semibold text-[#79462e] transition-colors duration-200 hover:border-[#b66f49] hover:text-[#b66f49]"
+            href="#slow-bar">Slow bar</a><a
+            class="focus-visible:outline-2 border border-[#e9dfd4] bg-[#fffdf9] px-[14px] py-[9px] text-[11px] font-semibold text-[#79462e] transition-colors duration-200 hover:border-[#b66f49] hover:text-[#b66f49]"
+            href="#bakery">Bakery</a><a
+            class="focus-visible:outline-2 border border-[#e9dfd4] bg-[#fffdf9] px-[14px] py-[9px] text-[11px] font-semibold text-[#79462e] transition-colors duration-200 hover:border-[#b66f49] hover:text-[#b66f49]"
+            href="#beans">Take-home beans</a>
+        </nav>
+      </div>
+    </section>
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-[48px] pt-[30px] md:pb-[66px] md:pt-[40px]" id="espresso">
+      <div class="mb-[25px]">
+        <div>
+          <span
+            class="inline-flex items-center gap-[9px] text-[10px] font-bold uppercase tracking-[.16em] text-[#b66f49]">01
+            / Espresso bar</span>
+          <h2 class="font-['Playfair_Display',Georgia,serif] text-[clamp(27px,3vw,34px)]">
+            Espresso &amp; milk coffee
+          </h2>
+        </div>
+        <p class="mb-[5px] text-[11px] text-[#786b61]">
+          Oat, almond or soy milk +₹40
         </p>
       </div>
-
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <article class="overflow-hidden border border-[#e9dfd4] bg-[#fffdf9]">
+          <img alt="Sea-salt caramel mocha" class="h-[225px] w-full object-cover object-bottom md:h-[205px]"
+            loading="lazy" src="assets/images/mocha-latte-jaipur.png" />
+          <div class="px-[19px] pb-5 pt-[18px]">
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="font-['Playfair_Display',Georgia,serif] m-0 text-[19px] font-semibold leading-[1.2]">
+                Sea-Salt Caramel Mocha
+              </h3>
+              <strong class="whitespace-nowrap text-sm text-[#b66f49]">₹260</strong>
+            </div>
+            <p class="mb-3 text-xs leading-[1.6] text-[#786b61] mt-[9px]">
+              Espresso, Belgian dark chocolate and salted caramel.
+            </p>
+            <span
+              class="inline-block bg-[#f4ece4] px-2 py-[5px] text-[9px] font-bold tracking-[.04em] text-[#79462e]">Signature
+              · Hot or iced</span>
+          </div>
+        </article>
+        <article class="overflow-hidden border border-[#e9dfd4] bg-[#fffdf9]">
+          <img alt="Spanish cortado" class="h-[225px] w-full object-cover object-bottom md:h-[205px]" loading="lazy"
+            src="assets/images/spanish-cortado.png" />
+          <div class="px-[19px] pb-5 pt-[18px]">
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="font-['Playfair_Display',Georgia,serif] m-0 text-[19px] font-semibold leading-[1.2]">
+                Spanish Cortado
+              </h3>
+              <strong class="whitespace-nowrap text-sm text-[#b66f49]">₹220</strong>
+            </div>
+            <p class="mb-3 text-xs leading-[1.6] text-[#786b61] mt-[9px]">
+              Rich espresso with warm, lightly sweet milk.
+            </p>
+            <span
+              class="inline-block bg-[#f4ece4] px-2 py-[5px] text-[9px] font-bold tracking-[.04em] text-[#79462e]">150
+              ml</span>
+          </div>
+        </article>
+        <article class="overflow-hidden border border-[#e9dfd4] bg-[#fffdf9]">
+          <img alt="Classic flat white" class="h-[225px] w-full object-cover object-bottom md:h-[205px]" loading="lazy"
+            src="assets/images/classic-flat-white.png" />
+          <div class="px-[19px] pb-5 pt-[18px]">
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="font-['Playfair_Display',Georgia,serif] m-0 text-[19px] font-semibold leading-[1.2]">
+                Classic Flat White
+              </h3>
+              <strong class="whitespace-nowrap text-sm text-[#b66f49]">₹210</strong>
+            </div>
+            <p class="mb-3 text-xs leading-[1.6] text-[#786b61] mt-[9px]">
+              Double ristretto with silky micro-foam.
+            </p>
+            <span
+              class="inline-block bg-[#f4ece4] px-2 py-[5px] text-[9px] font-bold tracking-[.04em] text-[#79462e]">200
+              ml · Guest favourite</span>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="pb-[48px] pt-[30px] md:pb-[66px] md:pt-[40px] bg-[#f4eee7]" id="slow-bar">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-[25px]">
+          <div>
+            <span
+              class="inline-flex items-center gap-[9px] text-[10px] font-bold uppercase tracking-[.16em] text-[#b66f49]">02
+              / Slow extraction</span>
+            <h2 class="font-['Playfair_Display',Georgia,serif] text-[clamp(27px,3vw,34px)]">
+              Pour-overs &amp; cold coffee
+            </h2>
+          </div>
+          <p class="mb-[5px] text-[11px] text-[#786b61]">
+            V60, Aeropress or Chemex
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <article class="overflow-hidden border border-[#e9dfd4] bg-[#fffdf9]">
+            <img alt="Chikmagalur V60 pour-over" class="h-[225px] w-full object-cover object-bottom md:h-[205px]"
+              loading="lazy" src="assets/images/v60.png" />
+            <div class="px-[19px] pb-5 pt-[18px]">
+              <div class="flex items-start justify-between gap-3">
+                <h3 class="font-['Playfair_Display',Georgia,serif] m-0 text-[19px] font-semibold leading-[1.2]">
+                  Chikmagalur V60
+                </h3>
+                <strong class="whitespace-nowrap text-sm text-[#b66f49]">₹230</strong>
+              </div>
+              <p class="mb-3 text-xs leading-[1.6] text-[#786b61] mt-[9px]">
+                Jasmine, orange blossom and sugarcane notes.
+              </p>
+              <span
+                class="inline-block bg-[#f4ece4] px-2 py-[5px] text-[9px] font-bold tracking-[.04em] text-[#79462e]">Single
+                origin · 240 ml</span>
+            </div>
+          </article>
+          <article class="overflow-hidden border border-[#e9dfd4] bg-[#fffdf9]">
+            <img alt="Reserve cold brew over ice" class="h-[225px] w-full object-cover object-bottom md:h-[205px]"
+              loading="lazy" src="assets/images/coldbrew.png" />
+            <div class="px-[19px] pb-5 pt-[18px]">
+              <div class="flex items-start justify-between gap-3">
+                <h3 class="font-['Playfair_Display',Georgia,serif] m-0 text-[19px] font-semibold leading-[1.2]">
+                  18-Hour Reserve Cold Brew
+                </h3>
+                <strong class="whitespace-nowrap text-sm text-[#b66f49]">₹220</strong>
+              </div>
+              <p class="mb-3 text-xs leading-[1.6] text-[#786b61] mt-[9px]">
+                Slow-steeped, smooth and full of cacao notes.
+              </p>
+              <span
+                class="inline-block bg-[#f4ece4] px-2 py-[5px] text-[9px] font-bold tracking-[.04em] text-[#79462e]">House
+                favourite · Over ice</span>
+            </div>
+          </article>
+          <article class="overflow-hidden border border-[#e9dfd4] bg-[#fffdf9]">
+            <img alt="Citrus espresso tonic" class="h-[225px] w-full object-cover object-bottom md:h-[205px]"
+              loading="lazy" src="assets/images/tonic.png" />
+            <div class="px-[19px] pb-5 pt-[18px]">
+              <div class="flex items-start justify-between gap-3">
+                <h3 class="font-['Playfair_Display',Georgia,serif] m-0 text-[19px] font-semibold leading-[1.2]">
+                  Citrus Espresso Tonic
+                </h3>
+                <strong class="whitespace-nowrap text-sm text-[#b66f49]">₹250</strong>
+              </div>
+              <p class="mb-3 text-xs leading-[1.6] text-[#786b61] mt-[9px]">
+                Espresso, tonic, kaffir lime and rosemary.
+              </p>
+              <span
+                class="inline-block bg-[#f4ece4] px-2 py-[5px] text-[9px] font-bold tracking-[.04em] text-[#79462e]">Sparkling
+                · Refreshing</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-[48px] pt-[30px] md:pb-[66px] md:pt-[40px]" id="bakery">
+      <div class="mb-[25px]">
+        <div>
+          <span
+            class="inline-flex items-center gap-[9px] text-[10px] font-bold uppercase tracking-[.16em] text-[#b66f49]">03
+            / From the oven</span>
+          <h2 class="font-['Playfair_Display',Georgia,serif] text-[clamp(27px,3vw,34px)]">
+            Bakery &amp; brunch
+          </h2>
+        </div>
+        <p class="mb-[5px] text-[11px] text-[#786b61]">
+          Baked fresh from 7 AM
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <article class="overflow-hidden border border-[#e9dfd4] bg-[#fffdf9]">
+          <img alt="Classic French butter croissant" class="h-[225px] w-full object-cover object-bottom md:h-[205px]"
+            loading="lazy" src="assets/images/croissant.png" />
+          <div class="px-[19px] pb-5 pt-[18px]">
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="font-['Playfair_Display',Georgia,serif] m-0 text-[19px] font-semibold leading-[1.2]">
+                Classic French Croissant
+              </h3>
+              <strong class="whitespace-nowrap text-sm text-[#b66f49]">₹180</strong>
+            </div>
+            <p class="mb-3 text-xs leading-[1.6] text-[#786b61] mt-[9px]">
+              Golden, flaky and made with cultured butter.
+            </p>
+            <span
+              class="inline-block bg-[#f4ece4] px-2 py-[5px] text-[9px] font-bold tracking-[.04em] text-[#79462e]">Vegetarian</span>
+          </div>
+        </article>
+        <article class="overflow-hidden border border-[#e9dfd4] bg-[#fffdf9]">
+          <img alt="Almond pain au chocolat" class="h-[225px] w-full object-cover object-bottom md:h-[205px]"
+            loading="lazy" src="assets/images/almond-pain-chocolat.png" />
+          <div class="px-[19px] pb-5 pt-[18px]">
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="font-['Playfair_Display',Georgia,serif] m-0 text-[19px] font-semibold leading-[1.2]">
+                Almond Pain au Chocolat
+              </h3>
+              <strong class="whitespace-nowrap text-sm text-[#b66f49]">₹230</strong>
+            </div>
+            <p class="mb-3 text-xs leading-[1.6] text-[#786b61] mt-[9px]">
+              Almond cream, dark chocolate and toasted nuts.
+            </p>
+            <span
+              class="inline-block bg-[#f4ece4] px-2 py-[5px] text-[9px] font-bold tracking-[.04em] text-[#79462e]">Contains
+              nuts</span>
+          </div>
+        </article>
+        <article class="overflow-hidden border border-[#e9dfd4] bg-[#fffdf9]">
+          <img alt="Avocado and feta sourdough toast" class="h-[225px] w-full object-cover object-bottom md:h-[205px]"
+            loading="lazy" src="assets/images/avocado-sourdough.png" />
+          <div class="px-[19px] pb-5 pt-[18px]">
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="font-['Playfair_Display',Georgia,serif] m-0 text-[19px] font-semibold leading-[1.2]">
+                Avocado &amp; Feta Sourdough
+              </h3>
+              <strong class="whitespace-nowrap text-sm text-[#b66f49]">₹290</strong>
+            </div>
+            <p class="mb-3 text-xs leading-[1.6] text-[#786b61] mt-[9px]">
+              Avocado, feta, cherry tomatoes and chilli.
+            </p>
+            <span
+              class="inline-block bg-[#f4ece4] px-2 py-[5px] text-[9px] font-bold tracking-[.04em] text-[#79462e]">Sourdough
+              bakery</span>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="bg-[#f2e9df] py-[52px] md:pb-[78px] md:pt-[70px]" id="beans">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-[25px]">
+          <div>
+            <span
+              class="inline-flex items-center gap-[9px] text-[10px] font-bold uppercase tracking-[.16em] text-[#b66f49]">04
+              / Take Mocha home</span>
+            <h2 class="font-['Playfair_Display',Georgia,serif] text-[clamp(27px,3vw,34px)]">
+              Freshly roasted beans
+            </h2>
+          </div>
+          <p class="mb-[5px] text-[11px] text-[#786b61]">
+            Custom grind available at no extra charge
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <article class="border border-[#e6dace] bg-[#fffdf9] p-[26px]">
+            <span class="mb-[15px] inline-block text-[9px] font-bold uppercase tracking-[.15em] text-[#b66f49]">Daily
+              house roast</span>
+            <h3 class="font-['Playfair_Display',Georgia,serif] m-0 text-[19px] font-semibold leading-[1.2]">
+              Jaipur Morning Blend
+            </h3>
+            <p class="mb-3 text-xs leading-[1.6] text-[#786b61] mt-[9px]">
+              Medium roast · Cocoa, hazelnut, brown sugar
+            </p>
+            <div
+              class="mt-5 font-['Playfair_Display',Georgia,serif] text-[28px] font-semibold text-[#b66f49] mb-[18px]">
+              ₹520
+              <span class="font-['DM_Sans',Arial,sans-serif] text-[11px] font-medium text-[#786b61]">/ 250g</span>
+            </div>
+            <a class="inline-flex items-center gap-2 border-b border-[#c7a58e] pb-1 text-xs font-bold text-[#79462e] hover:border-[#b66f49] hover:text-[#b66f49]"
+              href="contact.html#reserve">Order for pickup →</a>
+          </article>
+          <article class="border border-[#e6dace] bg-[#fffdf9] p-[26px] border-[#79462e]-dark bg-[#39251b]">
+            <span class="mb-[15px] inline-block text-[9px] font-bold uppercase tracking-[.15em] text-[#b66f49]">Estate
+              reserve</span>
+            <h3 class="font-['Playfair_Display',Georgia,serif] m-0 text-[19px] font-semibold leading-[1.2]">
+              Chikmagalur Honey Micro-Lot
+            </h3>
+            <p class="mb-3 text-xs leading-[1.6] text-[#786b61] mt-[9px]">
+              Light-medium roast · Orange blossom, honey, fig
+            </p>
+            <div
+              class="mt-5 font-['Playfair_Display',Georgia,serif] text-[28px] font-semibold text-[#b66f49] mb-[18px]">
+              ₹680
+              <span class="font-['DM_Sans',Arial,sans-serif] text-[11px] font-medium text-[#786b61]">/ 250g</span>
+            </div>
+            <a class="inline-flex items-center gap-2 border-b border-[#c7a58e] pb-1 text-xs font-bold text-[#79462e] hover:border-[#b66f49] hover:text-[#b66f49]"
+              href="contact.html#reserve">Order for pickup →</a>
+          </article>
+          <article class="border border-[#e6dace] bg-[#fffdf9] p-[26px]">
+            <span class="mb-[15px] inline-block text-[9px] font-bold uppercase tracking-[.15em] text-[#b66f49]">Tasting
+              experience</span>
+            <h3 class="font-['Playfair_Display',Georgia,serif] m-0 text-[19px] font-semibold leading-[1.2]">
+              Roaster’s Tasting Box
+            </h3>
+            <p class="mb-3 text-xs leading-[1.6] text-[#786b61] mt-[9px]">
+              Three Indian micro-lot coffees with tasting notes.
+            </p>
+            <div
+              class="mt-5 font-['Playfair_Display',Georgia,serif] text-[28px] font-semibold text-[#b66f49] mb-[18px]">
+              ₹1,250
+              <span class="font-['DM_Sans',Arial,sans-serif] text-[11px] font-medium text-[#786b61]">/ 3 × 150g</span>
+            </div>
+            <a
+              class="inline-flex items-center gap-2 border-b border-[#c7a58e] pb-1 text-xs font-bold text-[#79462e] hover:border-[#b66f49] hover:text-[#b66f49]">Order
+              for pickup →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="border-t border-[#e9dfd4] py-[42px]">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-start justify-between gap-5 md:flex-row md:items-center">
+        <div>
+          <span
+            class="inline-flex items-center gap-[9px] text-[10px] font-bold uppercase tracking-[.16em] text-[#b66f49]">See
+            you soon</span>
+          <h2 class="font-['Playfair_Display',Georgia,serif] text-[32px]">
+            Your next cup is close.
+          </h2>
+        </div>
+        <a class="inline-flex min-h-[49px] items-center justify-center gap-3 rounded-[3px] border border-[#79462e] bg-[#79462e] px-[23px] text-xs font-bold tracking-[.025em] text-[#fffaf5] transition-[background,border-color,transform] duration-200 hover:-translate-y-px hover:border-[#79462e]-dark hover:bg-[#39251b]"
+          href="contact.html#reserve">Book a table <span>→</span></a>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-[#2c1d15] pt-[42px] text-[#eee2d7]">
+    <div
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 gap-x-[18px] gap-y-[25px] pb-[34px] sm:grid-cols-2 md:grid-cols-[1.3fr_.7fr_1fr] md:gap-[35px]">
+      <div class="sm:col-span-2 md:col-span-1">
+        <a class="font-['Playfair_Display',Georgia,serif] leading-none font-bold tracking-[-.06em] inline-block text-[27px] text-[#fffaf5]"
+          href="index.html">Mocha<span class="text-[#b66f49]">.</span></a>
+        <p class="mt-[10px] text-[11px] text-[#bda99b]">
+          Specialty coffee in C-Scheme, Jaipur.
+        </p>
+      </div>
+      <div class="flex flex-col items-start gap-[10px] text-[11px] text-[#d7c7bb]">
+        <a class="focus-visible:outline-2 transition-colors duration-200 hover:text-[#e5b18f]"
+          href="index.html">Home</a><a
+          class="focus-visible:outline-2 transition-colors duration-200 hover:text-[#e5b18f]"
+          href="gallery.html">Gallery</a><a
+          class="focus-visible:outline-2 transition-colors duration-200 hover:text-[#e5b18f]"
+          href="contact.html">Contact</a>
+      </div>
+      <div class="flex flex-col items-start gap-[10px] text-[11px] text-[#d7c7bb]">
+        <a class="focus-visible:outline-2 transition-colors duration-200 hover:text-[#e5b18f]"
+          href="tel:+911412345678">+91 141 234 5678</a><a
+          class="focus-visible:outline-2 transition-colors duration-200 hover:text-[#e5b18f]"
+          href="mailto:hello@mochacafejaipur.com">hello@mochacafejaipur.com</a>
+      </div>
+    </div>
+    <div
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between gap-[15px] border-t border-white/10 pb-[17px] pt-[15px] text-[9px] text-[#a99587] min-[421px]:flex-row">
+      <span>© 2026 Mocha Café &amp; Roastery</span><span>Made for slow coffee days.</span>
     </div>
   </footer>
-
 </body>
 
 </html>
