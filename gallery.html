@@ -3,213 +3,447 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <meta content="A look inside Mocha Café &amp; Roastery in C-Scheme, Jaipur." name="description" />
-  <title>Gallery | Mocha Café &amp; Roastery</title>
-  <link href="https://fonts.googleapis.com" rel="preconnect" />
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="A visual tour of Mocha Café & Roastery in C-Scheme, Jaipur. Discover our sandstone courtyard, artisan roastery, manual brew bar, and freshly baked pastries." />
+  <title>Gallery & Moments | Mocha Café & Roastery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
     rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon" />
 </head>
 
 <body
-  class="min-h-screen bg-[#fbf8f3] text-[#2d211b] font-['DM_Sans',Arial,sans-serif] antialiased selection:bg-[#e7c8b5] selection:text-[#39251b]">
-  <header class="sticky top-0 z-20 border-b border-[#e9dfd4] bg-[rgba(251,248,243,0.96)] backdrop-blur-[14px]">
-    <nav
-      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative flex min-h-[68px] items-center justify-between md:min-h-[78px]">
-      <a class="font-['Playfair_Display',Georgia,serif] text-[30px] leading-none font-bold tracking-[-.06em] text-[#39251b]"
-        href="index.html">Mocha<span class="text-[#b66f49]">.</span></a><input class="peer sr-only" id="nav-toggle"
-        type="checkbox" /><label
-        class="flex h-10 w-10 cursor-pointer flex-col items-center justify-center gap-[5px] md:hidden peer-focus-visible:outline-2 peer-focus-visible:outline-terracotta peer-focus-visible:outline-offset-[3px]"
-        for="nav-toggle"><span class="block h-[2px] w-[21px] bg-[#39251b]"></span><span
-          class="block h-[2px] w-[21px] bg-[#39251b]"></span><span
-          class="block h-[2px] w-[21px] bg-[#39251b]"></span></label>
+  class="min-h-screen bg-[#FAF7F2] dark:bg-[#120E0B] text-[#281A12] dark:text-[#F4ECE3] font-['Plus_Jakarta_Sans',system-ui,sans-serif] selection:bg-[#E8C7B0] selection:text-[#281A12] antialiased">
+  <header
+    class="sticky top-0 z-30 border-b border-[#EBE2D8] dark:border-[#261C16] bg-[#FAF7F2]/95 dark:bg-[#120E0B]/95 backdrop-blur-md transition-colors">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative flex h-20 items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a class="flex items-center gap-2.5 group focus:outline-none focus:ring-2 focus:ring-[#B35E32] rounded-md p-1"
+          href="index.html">
+          <span
+            class="flex h-10 w-10 pl-[2.5px] items-center justify-center rounded-full bg-[#B35E32] text-[#FAF7F2] shadow-sm transition-transform group-hover:scale-105">
+            <i class="fa-solid fa-mug-hot text-lg"></i>
+          </span>
+          <div class="flex flex-col">
+            <span
+              class="font-['Playfair_Display',Georgia,serif] text-2xl font-bold tracking-tight text-[#281A12] dark:text-[#FAF7F2] leading-none">Mocha<span
+                class="text-[#B35E32]">.</span></span>
+            <span class="text-[10px] font-semibold uppercase tracking-widest text-[#7C695D] dark:text-[#A8988C]">Jaipur
+              Roastery</span>
+          </div>
+        </a>
+      </div>
+
+      <input class="peer hidden" id="nav-toggle" type="checkbox" />
+      <label
+        class="flex h-11 w-11 cursor-pointer items-center justify-center rounded-lg border border-[#EBE2D8] dark:border-[#2E221B] text-[#281A12] dark:text-[#F4ECE3] hover:bg-[#F2ECE4] dark:hover:bg-[#1C1510] transition-colors md:hidden focus:ring-2 focus:ring-[#B35E32]"
+        for="nav-toggle">
+        <i class="fa-solid fa-bars text-lg"></i>
+      </label>
+
       <div
-        class="absolute left-0 right-0 top-full hidden flex-col items-stretch gap-[18px] border border-t-0 border-[#e9dfd4] bg-[#fbf8f3] px-[22px] pb-[22px] pt-[18px] text-[13px] font-semibold text-[#786b61] shadow-[0_14px_22px_rgba(40,25,15,0.08)] peer-checked:flex md:static md:flex md:flex-row md:items-center md:gap-[34px] md:border-0 md:bg-transparent md:p-0 md:text-[13px] md:shadow-none">
-        <a class="transition-colors duration-200 hover:text-[#b66f49]" href="index.html">Home</a><a
-          class="transition-colors duration-200 hover:text-[#b66f49]" href="menu.html">Menu</a><a
-          class="transition-colors duration-200 hover:text-[#b66f49] text-[#b66f49]" href="gallery.html">Gallery</a><a
-          class="transition-colors duration-200 hover:text-[#b66f49]" href="contact.html">Contact</a><a
-          class="inline-flex items-center justify-center gap-3 rounded-[3px] border border-[#79462e] bg-[#79462e] font-bold tracking-[.025em] text-[#fffaf5] transition-[background,border-color,transform] duration-200 hover:-translate-y-px hover:border-[#39251b] hover:bg-[#39251b] min-h-10 px-[18px] text-[11px] w-full md:w-auto"
-          href="contact.html#reserve">Book a table</a>
+        class="absolute left-0 right-0 top-full hidden flex-col border-b border-[#EBE2D8] dark:border-[#261C16] bg-[#FAF7F2] dark:bg-[#15100C] p-6 shadow-xl peer-checked:flex md:static md:flex md:flex-row md:items-center md:gap-8 md:border-0 md:bg-transparent md:dark:bg-transparent md:p-0 md:shadow-none">
+        <div class="flex flex-col gap-4 font-medium text-sm md:flex-row md:items-center md:gap-7">
+          <a class="text-[#645247] dark:text-[#C5B7AA] transition-colors hover:text-[#B35E32] dark:hover:text-[#E27D48] focus:outline-none focus:ring-2 focus:ring-[#B35E32] rounded px-1"
+            href="index.html">Home</a>
+          <a class="text-[#645247] dark:text-[#C5B7AA] transition-colors hover:text-[#B35E32] dark:hover:text-[#E27D48] focus:outline-none focus:ring-2 focus:ring-[#B35E32] rounded px-1"
+            href="menu.html">Menu</a>
+          <a class="text-[#B35E32] dark:text-[#E27D48] font-bold transition-colors hover:text-[#B35E32] focus:outline-none focus:ring-2 focus:ring-[#B35E32] rounded px-1"
+            href="gallery.html">Gallery</a>
+          <a class="text-[#645247] dark:text-[#C5B7AA] transition-colors hover:text-[#B35E32] dark:hover:text-[#E27D48] focus:outline-none focus:ring-2 focus:ring-[#B35E32] rounded px-1"
+            href="contact.html">Contact</a>
+        </div>
+
+        <div
+          class="mt-6 flex flex-col gap-4 border-t border-[#EBE2D8] dark:border-[#261C16] pt-6 md:mt-0 md:flex-row md:items-center md:gap-6 md:border-0 md:pt-0">
+          <div class="flex items-center gap-3 text-[#7C695D] dark:text-[#A8988C]">
+            <a class="hover:text-[#B35E32] dark:hover:text-[#E27D48] transition-colors p-1" href="#"><i
+                class="fa-brands fa-instagram text-base"></i></a>
+            <a class="hover:text-[#B35E32] dark:hover:text-[#E27D48] transition-colors p-1" href="#"><i
+                class="fa-brands fa-facebook-f text-base"></i></a>
+            <a class="hover:text-[#B35E32] dark:hover:text-[#E27D48] transition-colors p-1" href="#"><i
+                class="fa-brands fa-x-twitter text-base"></i></a>
+          </div>
+
+          <a class="inline-flex items-center justify-center gap-2 rounded-lg bg-[#B35E32] hover:bg-[#8F421D] px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-[#FAF7F2] shadow-sm transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#B35E32] focus:ring-offset-2"
+            href="contact.html#reserve">
+            <i class="fa-solid fa-calendar-check text-xs"></i>
+            <span>Book a Table</span>
+          </a>
+        </div>
       </div>
     </nav>
   </header>
+
   <main>
-    <section class="px-0 pb-[37px] pt-[54px] text-center md:pb-[48px] md:pt-[75px]">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Gallery Hero Section -->
+    <section class="py-12 sm:py-16 text-center border-b border-[#EBE2D8] dark:border-[#261C16]">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <span
-          class="inline-flex items-center gap-[9px] text-[10px] font-bold uppercase tracking-[.16em] text-[#b66f49]">A
-          glimpse inside · C-Scheme, Jaipur</span>
+          class="inline-flex items-center gap-2 rounded-full border border-[#E5DAD0] dark:border-[#2E221B] bg-[#F2ECE4] dark:bg-[#1C1510] px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-[#B35E32] dark:text-[#E27D48]">
+          <i class="fa-solid fa-camera"></i>
+          <span>Life at Mocha · C-Scheme, Jaipur</span>
+        </span>
+
         <h1
-          class="font-['Playfair_Display',Georgia,serif] mb-[10px] mt-[13px] text-[clamp(42px,5vw,60px)] font-semibold leading-[1.1] tracking-[-.045em] text-[#39251b]">
-          Come on in.
+          class="font-['Playfair_Display',Georgia,serif] text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#281A12] dark:text-[#FAF7F2] leading-tight mt-6 mb-4">
+          A visual tour through Mocha.
         </h1>
-        <p class="m-0 text-sm text-[#786b61]">
-          Coffee, courtyard and all the little details.
+
+        <p class="text-base sm:text-lg text-[#645247] dark:text-[#C5B7AA] max-w-2xl mx-auto leading-relaxed">
+          Sandstone arches, sunlit corners, artisan micro-roasting, and slow
+          coffee poured one mindful cup at a time.
         </p>
       </div>
     </section>
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 pt-2 md:pb-20">
-      <div class="mb-6 flex items-end justify-between border-b border-[#e9dfd4] pb-4">
-        <p class="m-0 text-xs font-semibold uppercase tracking-[.14em] text-[#786b61]">
-          A few moments at Mocha
-        </p>
-        <span class="text-xs text-[#786b61]">01 — 09</span>
-      </div>
-      <div class="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-12 lg:gap-5">
-        <figure class="group relative col-span-2 m-0 overflow-hidden bg-[#f2e9df] lg:col-span-7 lg:row-span-2">
-          <div class="aspect-[16/10] h-full min-h-[250px] lg:aspect-auto">
-            <img alt="Barista making a V60 pour-over"
-              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]"
-              loading="lazy" src="assets/images/v60-extraction.png" />
+
+    <!-- Pure Visual Photo Gallery Grid (CSS Grid) -->
+    <section class="py-16 sm:py-20 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between pb-6 mb-10 border-b border-[#EBE2D8] dark:border-[#261C16]">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-[#B35E32] dark:text-[#E27D48]">Photo
+              Exhibition</span>
+            <h2
+              class="font-['Playfair_Display',Georgia,serif] text-2xl sm:text-3xl font-bold text-[#281A12] dark:text-[#FAF7F2] mt-1">
+              Moments in C-Scheme
+            </h2>
           </div>
-          <figcaption
-            class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent px-4 pb-4 pt-12 text-sm font-medium text-white sm:px-5 sm:pb-5">
-            <span class="font-['Playfair_Display',Georgia,serif] text-xl sm:text-2xl">Slow pour bar</span>
-          </figcaption>
-        </figure>
-        <figure class="group relative col-span-1 m-0 overflow-hidden bg-[#f2e9df] lg:col-span-5">
-          <div class="aspect-[4/3]">
-            <img alt="Sunlit courtyard with sandstone arches and bougainvillea"
-              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]"
-              loading="lazy" src="assets/images/courtyard.png" />
-          </div>
-          <figcaption
-            class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent px-3 pb-3 pt-9 text-sm font-medium text-white sm:px-4 sm:pb-4">
-            <span class="font-['Playfair_Display',Georgia,serif] text-base sm:text-lg">The courtyard</span>
-          </figcaption>
-        </figure>
-        <figure class="group relative col-span-1 m-0 overflow-hidden bg-[#f2e9df] lg:col-span-5">
-          <div class="aspect-[4/3]">
-            <img alt="Small-batch coffee roaster and fresh beans"
-              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]"
-              loading="lazy" src="assets/images/roaster.png" />
-          </div>
-          <figcaption
-            class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent px-3 pb-3 pt-9 text-sm font-medium text-white sm:px-4 sm:pb-4">
-            <span class="font-['Playfair_Display',Georgia,serif] text-base sm:text-lg">Fresh roasts</span>
-          </figcaption>
-        </figure>
-        <figure class="group relative col-span-1 m-0 overflow-hidden bg-[#f2e9df] lg:col-span-4">
-          <div class="aspect-[4/3]">
-            <img alt="Signature mocha in a terracotta cup"
-              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]"
-              loading="lazy" src="assets/images/espresso-extraction.png" />
-          </div>
-          <figcaption
-            class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent px-3 pb-3 pt-9 text-sm font-medium text-white sm:px-4 sm:pb-4">
-            <span class="font-['Playfair_Display',Georgia,serif] text-base sm:text-lg">Signature mocha</span>
-          </figcaption>
-        </figure>
-        <figure class="group relative col-span-1 m-0 overflow-hidden bg-[#f2e9df] lg:col-span-4">
-          <div class="aspect-[4/3]">
-            <img alt="Freshly baked croissants and pistachio pastries"
-              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]"
-              loading="lazy" src="assets/images/pastry.png" />
-          </div>
-          <figcaption
-            class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent px-3 pb-3 pt-9 text-sm font-medium text-white sm:px-4 sm:pb-4">
-            <span class="font-['Playfair_Display',Georgia,serif] text-base sm:text-lg">From the bakery</span>
-          </figcaption>
-        </figure>
-        <figure class="group relative col-span-2 m-0 overflow-hidden bg-[#f2e9df] lg:col-span-4">
-          <div class="aspect-[16/9] lg:aspect-[4/3]">
-            <img alt="Warm evening café lighting"
-              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]"
-              loading="lazy" src="assets/images/evening.png" />
-          </div>
-          <figcaption
-            class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent px-3 pb-3 pt-9 text-sm font-medium text-white sm:px-4 sm:pb-4">
-            <span class="font-['Playfair_Display',Georgia,serif] text-base sm:text-lg">Evenings at Mocha</span>
-          </figcaption>
-        </figure>
-        <figure class="group relative col-span-1 m-0 overflow-hidden bg-[#f2e9df] lg:col-span-4">
-          <div class="aspect-[4/3]">
-            <img alt="Cold brew served over ice"
-              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]"
-              loading="lazy" src="assets/images/18-coldbrew.png" />
-          </div>
-          <figcaption
-            class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent px-3 pb-3 pt-9 text-sm font-medium text-white sm:px-4 sm:pb-4">
-            <span class="font-['Playfair_Display',Georgia,serif] text-base sm:text-lg">Cold brew</span>
-          </figcaption>
-        </figure>
-        <figure class="group relative col-span-1 m-0 overflow-hidden bg-[#f2e9df] lg:col-span-4">
-          <div class="aspect-[4/3]">
-            <img alt="Tulip latte art in a ceramic cup"
-              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]"
-              loading="lazy" src="assets/images/classic-flat-white.png" />
-          </div>
-          <figcaption
-            class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent px-3 pb-3 pt-9 text-sm font-medium text-white sm:px-4 sm:pb-4">
-            <span class="font-['Playfair_Display',Georgia,serif] text-base sm:text-lg">Latte art</span>
-          </figcaption>
-        </figure>
-        <figure class="group relative col-span-2 m-0 overflow-hidden bg-[#f2e9df] lg:col-span-4">
-          <div class="aspect-[16/9] lg:aspect-[4/3]">
-            <img alt="Café lounge with sandstone details"
-              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]"
-              loading="lazy" src="assets/images/hero-jaipur.png" />
-          </div>
-          <figcaption
-            class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent px-3 pb-3 pt-9 text-sm font-medium text-white sm:px-4 sm:pb-4">
-            <span class="font-['Playfair_Display',Georgia,serif] text-base sm:text-lg">The roastery lounge</span>
-          </figcaption>
-        </figure>
-      </div>
-    </section>
-    <section class="border-t border-[#e9dfd4] py-[42px]">
-      <div
-        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-start justify-between gap-5 md:flex-row md:items-center">
-        <div>
-          <span
-            class="inline-flex items-center gap-[9px] text-[10px] font-bold uppercase tracking-[.16em] text-[#b66f49]">Make
-            it a visit</span>
-          <h2 class="font-['Playfair_Display',Georgia,serif] text-[32px]">
-            See you over coffee.
-          </h2>
+          <span class="text-xs font-semibold text-[#7C695D] dark:text-[#A8988C]">
+            12 Captures
+          </span>
         </div>
-        <div class="flex flex-wrap items-center gap-5">
-          <a class="inline-flex min-h-[49px] items-center justify-center gap-3 rounded-[3px] border border-[#79462e] bg-[#79462e] px-[23px] text-xs font-bold tracking-[.025em] text-[#fffaf5] transition-[background,border-color,transform] duration-200 hover:-translate-y-px hover:border-[#39251b] hover:bg-[#39251b]"
-            href="contact.html#reserve">Book a table <span>→</span></a><a
-            class="inline-flex items-center gap-2 border-b border-[#c7a58e] pb-1 text-xs font-bold text-[#79462e] hover:border-[#b66f49] hover:text-[#b66f49]"
-            href="menu.html">Explore the menu</a>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <!-- Photo 1: V60 Extraction -->
+          <figure
+            class="group rounded-2xl overflow-hidden border border-[#EBE2D8] dark:border-[#261C16] bg-[#FFFFFF] dark:bg-[#1A1410] shadow-sm hover:shadow-2xl transition-all duration-300">
+            <div class="overflow-hidden aspect-[4/3]">
+              <img alt="Barista brewing a V60 manual pour-over with single origin coffee"
+                class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                src="assets/images/v60-extraction.png" loading="lazy" width="700" height="525" />
+            </div>
+          </figure>
+
+          <!-- Photo 2: Courtyard -->
+          <figure
+            class="group rounded-2xl overflow-hidden border border-[#EBE2D8] dark:border-[#261C16] bg-[#FFFFFF] dark:bg-[#1A1410] shadow-sm hover:shadow-2xl transition-all duration-300">
+            <div class="overflow-hidden aspect-[4/3]">
+              <img alt="Sunlit sandstone courtyard with bougainvillea in C-Scheme Jaipur"
+                class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                src="assets/images/courtyard.png" loading="lazy" width="700" height="525" />
+            </div>
+          </figure>
+
+          <!-- Photo 3: Coffee Roaster -->
+          <figure
+            class="group rounded-2xl overflow-hidden border border-[#EBE2D8] dark:border-[#261C16] bg-[#FFFFFF] dark:bg-[#1A1410] shadow-sm hover:shadow-2xl transition-all duration-300">
+            <div class="overflow-hidden aspect-[4/3]">
+              <img alt="Specialty drum coffee roaster machine in the roastery"
+                class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                src="assets/images/roaster.png" loading="lazy" width="700" height="525" />
+            </div>
+          </figure>
+
+          <!-- Photo 4: Espresso Extraction -->
+          <figure
+            class="group rounded-2xl overflow-hidden border border-[#EBE2D8] dark:border-[#261C16] bg-[#FFFFFF] dark:bg-[#1A1410] shadow-sm hover:shadow-2xl transition-all duration-300">
+            <div class="overflow-hidden aspect-[4/3]">
+              <img alt="Golden espresso stream extracting into ceramic cup"
+                class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                src="assets/images/espresso-extraction.png" loading="lazy" width="700" height="525" />
+            </div>
+          </figure>
+
+          <!-- Photo 5: Fresh Bakery Pastries -->
+          <figure
+            class="group rounded-2xl overflow-hidden border border-[#EBE2D8] dark:border-[#261C16] bg-[#FFFFFF] dark:bg-[#1A1410] shadow-sm hover:shadow-2xl transition-all duration-300">
+            <div class="overflow-hidden aspect-[4/3]">
+              <img alt="Golden freshly baked pastries from the morning oven"
+                class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                src="assets/images/pastry.png" loading="lazy" width="700" height="525" />
+            </div>
+          </figure>
+
+          <!-- Photo 6: Evening Ambiance -->
+          <figure
+            class="group rounded-2xl overflow-hidden border border-[#EBE2D8] dark:border-[#261C16] bg-[#FFFFFF] dark:bg-[#1A1410] shadow-sm hover:shadow-2xl transition-all duration-300">
+            <div class="overflow-hidden aspect-[4/3]">
+              <img alt="Cozy evening lighting with warm lamps inside Mocha café"
+                class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                src="assets/images/evening.png" loading="lazy" width="700" height="525" />
+            </div>
+          </figure>
+
+          <!-- Photo 7: 18-Hour Cold Brew -->
+          <figure
+            class="group rounded-2xl overflow-hidden border border-[#EBE2D8] dark:border-[#261C16] bg-[#FFFFFF] dark:bg-[#1A1410] shadow-sm hover:shadow-2xl transition-all duration-300">
+            <div class="overflow-hidden aspect-[4/3]">
+              <img alt="Chilled reserve cold brew in glassware with crystal ice"
+                class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                src="assets/images/18-coldbrew.png" loading="lazy" width="700" height="525" />
+            </div>
+          </figure>
+
+          <!-- Photo 8: Classic Flat White -->
+          <figure
+            class="group rounded-2xl overflow-hidden border border-[#EBE2D8] dark:border-[#261C16] bg-[#FFFFFF] dark:bg-[#1A1410] shadow-sm hover:shadow-2xl transition-all duration-300">
+            <div class="overflow-hidden aspect-[4/3]">
+              <img alt="Tulip latte art in ceramic coffee cup"
+                class="w-full h-full object-cover object-bottom transition-transform duration-700 ease-out group-hover:scale-105"
+                src="assets/images/classic-flat-white.png" loading="lazy" width="700" height="525" />
+            </div>
+          </figure>
+
+          <!-- Photo 9: The Roastery Lounge -->
+          <figure
+            class="group rounded-2xl overflow-hidden border border-[#EBE2D8] dark:border-[#261C16] bg-[#FFFFFF] dark:bg-[#1A1410] shadow-sm hover:shadow-2xl transition-all duration-300">
+            <div class="overflow-hidden aspect-[4/3]">
+              <img alt="Main interior dining room and coffee bar of Mocha"
+                class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                src="assets/images/hero-jaipur.png" loading="lazy" width="700" height="525" />
+            </div>
+          </figure>
+
+          <!-- Photo 10: Almond Pain au Chocolat -->
+          <figure
+            class="group rounded-2xl overflow-hidden border border-[#EBE2D8] dark:border-[#261C16] bg-[#FFFFFF] dark:bg-[#1A1410] shadow-sm hover:shadow-2xl transition-all duration-300">
+            <div class="overflow-hidden aspect-[4/3]">
+              <img alt="Golden almond pain au chocolat with toasted flaked almonds"
+                class="w-full h-full object-cover object-bottom transition-transform duration-700 ease-out group-hover:scale-105"
+                src="assets/images/almond-pain-chocolat.png" loading="lazy" width="700" height="525" />
+            </div>
+          </figure>
+
+          <!-- Photo 11: Avocado Toast -->
+          <figure
+            class="group rounded-2xl overflow-hidden border border-[#EBE2D8] dark:border-[#261C16] bg-[#FFFFFF] dark:bg-[#1A1410] shadow-sm hover:shadow-2xl transition-all duration-300">
+            <div class="overflow-hidden aspect-[4/3]">
+              <img alt="Avocado and feta sourdough brunch toast with cherry tomatoes"
+                class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                src="assets/images/avocado-sourdough.png" loading="lazy" width="700" height="525" />
+            </div>
+          </figure>
+
+          <!-- Photo 12: Espresso Tonic -->
+          <figure
+            class="group rounded-2xl overflow-hidden border border-[#EBE2D8] dark:border-[#261C16] bg-[#FFFFFF] dark:bg-[#1A1410] shadow-sm hover:shadow-2xl transition-all duration-300">
+            <div class="overflow-hidden aspect-[4/3]">
+              <img alt="Iced citrus espresso tonic in tall glass with lime and rosemary"
+                class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                src="assets/images/tonic.png" loading="lazy" width="700" height="525" />
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events & Gathering Feature Section (CSS Grid & Flexbox) -->
+    <section class="bg-[#F2ECE4] dark:bg-[#18130F] py-16 sm:py-20 border-y border-[#EBE2D8] dark:border-[#261C16]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#B35E32] dark:text-[#E27D48]">Gatherings &amp;
+            Community</span>
+          <h2
+            class="font-['Playfair_Display',Georgia,serif] text-3xl sm:text-4xl font-bold text-[#281A12] dark:text-[#FAF7F2] mt-2 mb-3">
+            More than a café. A creative space.
+          </h2>
+          <p class="text-sm text-[#645247] dark:text-[#C5B7AA]">
+            We host weekend coffee cupping sessions, small acoustic music sets,
+            and private courtyard celebrations.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <article
+            class="p-8 rounded-2xl border border-[#EBE2D8] dark:border-[#261C16] bg-[#FFFFFF] dark:bg-[#1A1410] shadow-sm">
+            <span
+              class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#B35E32]/10 text-[#B35E32] dark:text-[#E27D48] text-xl mb-6">
+              <i class="fa-solid fa-mug-saucer"></i>
+            </span>
+            <h3
+              class="font-['Playfair_Display',Georgia,serif] text-xl font-bold text-[#281A12] dark:text-[#FAF7F2] mb-3">
+              Weekend Coffee Cuppings
+            </h3>
+            <p class="text-xs sm:text-sm text-[#645247] dark:text-[#C5B7AA] leading-relaxed mb-4">
+              Join our head roaster every Saturday at 11 AM to cup and taste 5 distinct Indian single-origin lots with
+              flavor profiling.
+            </p>
+            <span class="text-xs font-bold text-[#B35E32] dark:text-[#E27D48]">
+              Every Saturday · By Registration
+            </span>
+          </article>
+
+          <article
+            class="p-8 rounded-2xl border border-[#EBE2D8] dark:border-[#261C16] bg-[#FFFFFF] dark:bg-[#1A1410] shadow-sm">
+            <span
+              class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#B35E32]/10 text-[#B35E32] dark:text-[#E27D48] text-xl mb-6">
+              <i class="fa-solid fa-users"></i>
+            </span>
+            <h3
+              class="font-['Playfair_Display',Georgia,serif] text-xl font-bold text-[#281A12] dark:text-[#FAF7F2] mb-3">
+              Private Courtyard Bookings
+            </h3>
+            <p class="text-xs sm:text-sm text-[#645247] dark:text-[#C5B7AA] leading-relaxed mb-4">
+              Host intimate book launches, brand pop-ups, poetry readings, or anniversary breakfasts in our shaded
+              sandstone patio.
+            </p>
+            <span class="text-xs font-bold text-[#B35E32] dark:text-[#E27D48]">
+              Up to 40 Guests · Custom Menus
+            </span>
+          </article>
+
+          <article
+            class="p-8 rounded-2xl border border-[#EBE2D8] dark:border-[#261C16] bg-[#FFFFFF] dark:bg-[#1A1410] shadow-sm">
+            <span
+              class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#B35E32]/10 text-[#B35E32] dark:text-[#E27D48] text-xl mb-6">
+              <i class="fa-solid fa-guitar"></i>
+            </span>
+            <h3
+              class="font-['Playfair_Display',Georgia,serif] text-xl font-bold text-[#281A12] dark:text-[#FAF7F2] mb-3">
+              Acoustic Evenings
+            </h3>
+            <p class="text-xs sm:text-sm text-[#645247] dark:text-[#C5B7AA] leading-relaxed mb-4">
+              Unplugged local indie musicians performing gentle ambient music under the fairy lights on Sunday evenings.
+            </p>
+            <span class="text-xs font-bold text-[#B35E32] dark:text-[#E27D48]">
+              Sundays from 7:30 PM · Free Entry
+            </span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pre-Footer Banner -->
+    <section class="bg-[#281A12] text-[#FAF7F2] py-16 border-t border-[#3A2C23]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-[#E27D48]">Experience It Yourself</span>
+            <h2 class="font-['Playfair_Display',Georgia,serif] text-3xl font-bold mt-1">
+              Come on in for a fresh roast.
+            </h2>
+          </div>
+          <div class="flex flex-wrap items-center gap-4">
+            <a class="inline-flex items-center gap-2 rounded-lg bg-[#B35E32] hover:bg-[#8F421D] px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-[#FAF7F2] shadow-sm transition-all duration-200 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#B35E32]"
+              href="contact.html#reserve">
+              <span>Reserve a Table</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+            <a class="inline-flex items-center gap-2 rounded-lg border border-[#645247] hover:border-[#FAF7F2] px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-[#FAF7F2] transition-colors focus:outline-none focus:ring-2 focus:ring-[#B35E32]"
+              href="menu.html">
+              <span>Browse Menu</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
   </main>
-  <footer class="bg-[#2c1d15] pt-[42px] text-[#eee2d7]">
-    <div
-      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 gap-x-[18px] gap-y-[25px] pb-[34px] sm:grid-cols-2 md:grid-cols-[1.3fr_.7fr_1fr] md:gap-[35px]">
-      <div class="sm:col-span-2 md:col-span-1">
-        <a class="font-['Playfair_Display',Georgia,serif] leading-none font-bold tracking-[-.06em] inline-block text-[27px] text-[#fffaf5]"
-          href="index.html">Mocha<span class="text-[#b66f49]">.</span></a>
-        <p class="mt-[10px] text-[11px] text-[#bda99b]">
-          Specialty coffee in C-Scheme, Jaipur.
+
+  <footer class="bg-[#1C120C] text-[#D7C7BB] pt-16 pb-12 border-t border-[#2E2018]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 pb-12 border-b border-white/10">
+        <div>
+          <a class="font-['Playfair_Display',Georgia,serif] text-2xl font-bold tracking-tight text-[#FAF7F2] inline-block mb-3"
+            href="index.html">Mocha<span class="text-[#B35E32]">.</span></a>
+          <p class="text-xs leading-relaxed text-[#A8988C] mb-5">
+            Specialty micro-roastery and courtyard café located in C-Scheme,
+            Jaipur. Celebrating single-origin Indian coffees and artisan bakes.
+          </p>
+          <div class="flex items-center gap-3">
+            <a class="flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 hover:bg-[#B35E32] hover:text-white transition-colors text-sm text-[#FAF7F2] focus:outline-none focus:ring-2 focus:ring-[#B35E32]"
+              href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a class="flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 hover:bg-[#B35E32] hover:text-white transition-colors text-sm text-[#FAF7F2] focus:outline-none focus:ring-2 focus:ring-[#B35E32]"
+              href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a class="flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 hover:bg-[#B35E32] hover:text-white transition-colors text-sm text-[#FAF7F2] focus:outline-none focus:ring-2 focus:ring-[#B35E32]"
+              href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a class="flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 hover:bg-[#B35E32] hover:text-white transition-colors text-sm text-[#FAF7F2] focus:outline-none focus:ring-2 focus:ring-[#B35E32]"
+              href="#"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-[#FAF7F2] mb-4">
+            Navigation
+          </h3>
+          <ul class="space-y-2.5 text-xs text-[#A8988C]">
+            <li>
+              <a class="hover:text-[#FAF7F2] transition-colors" href="index.html">Home Page</a>
+            </li>
+            <li>
+              <a class="hover:text-[#FAF7F2] transition-colors" href="menu.html">Menu &amp; Roastery Pricing</a>
+            </li>
+            <li>
+              <a class="hover:text-[#FAF7F2] transition-colors" href="gallery.html">Courtyard &amp; Roastery Gallery</a>
+            </li>
+            <li>
+              <a class="hover:text-[#FAF7F2] transition-colors" href="contact.html">Table Reservations</a>
+            </li>
+            <li>
+              <a class="hover:text-[#FAF7F2] transition-colors" href="menu.html#beans">Take-Home Coffee Beans</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-[#FAF7F2] mb-4">
+            Opening Hours
+          </h3>
+          <ul class="space-y-2 text-xs text-[#A8988C]">
+            <li class="flex justify-between">
+              <span>Monday – Friday:</span>
+              <span class="font-semibold text-[#FAF7F2]">8:00 AM – 11:00 PM</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Saturday – Sunday:</span>
+              <span class="font-semibold text-[#FAF7F2]">8:00 AM – 11:30 PM</span>
+            </li>
+            <li class="flex justify-between pt-2 border-t border-white/5">
+              <span>Morning Bakery:</span>
+              <span class="font-semibold text-[#FAF7F2]">From 7:00 AM</span>
+            </li>
+            <li class="text-[11px] text-[#8F7D71] mt-2">
+              Kitchen closes 30 mins before café closing.
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-[#FAF7F2] mb-4">
+            Contact &amp; Location
+          </h3>
+          <address class="not-italic space-y-2.5 text-xs text-[#A8988C]">
+            <p class="flex items-start gap-2.5">
+              <i class="fa-solid fa-location-dot mt-0.5 text-[#B35E32]"></i>
+              <span>Plot 14, Subhash Marg, C-Scheme, Jaipur, Rajasthan 302001</span>
+            </p>
+            <p class="flex items-center gap-2.5">
+              <i class="fa-solid fa-phone text-[#B35E32]"></i>
+              <a class="hover:text-[#FAF7F2] transition-colors" href="tel:+911412345678">+91 141 234 5678</a>
+            </p>
+            <p class="flex items-center gap-2.5">
+              <i class="fa-solid fa-envelope text-[#B35E32]"></i>
+              <a class="hover:text-[#FAF7F2] transition-colors"
+                href="mailto:hello@mochacafejaipur.com">hello@mochacafejaipur.com</a>
+            </p>
+          </address>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#8F7D71]">
+        <p>© 2026 Mocha Café &amp; Roastery. All rights reserved.</p>
+        <p class="flex items-center gap-2">
+          <span>Crafted for slow coffee days in Jaipur</span>
+          <i class="fa-solid fa-heart text-[#B35E32] text-[10px]"></i>
         </p>
       </div>
-      <div class="flex flex-col items-start gap-[10px] text-[11px] text-[#d7c7bb]">
-        <a class="focus-visible:outline-2 focus-visible:outline-terracotta focus-visible:outline-offset-[3px] transition-colors duration-200 hover:text-[#e5b18f]"
-          href="index.html">Home</a><a
-          class="focus-visible:outline-2 focus-visible:outline-terracotta focus-visible:outline-offset-[3px] transition-colors duration-200 hover:text-[#e5b18f]"
-          href="menu.html">Menu</a><a
-          class="focus-visible:outline-2 focus-visible:outline-terracotta focus-visible:outline-offset-[3px] transition-colors duration-200 hover:text-[#e5b18f]"
-          href="contact.html">Contact</a>
-      </div>
-      <div class="flex flex-col items-start gap-[10px] text-[11px] text-[#d7c7bb]">
-        <a class="focus-visible:outline-2 focus-visible:outline-terracotta focus-visible:outline-offset-[3px] transition-colors duration-200 hover:text-[#e5b18f]"
-          href="tel:+911412345678">+91 141 234 5678</a><a
-          class="focus-visible:outline-2 focus-visible:outline-terracotta focus-visible:outline-offset-[3px] transition-colors duration-200 hover:text-[#e5b18f]"
-          href="mailto:hello@mochacafejaipur.com">hello@mochacafejaipur.com</a>
-      </div>
-    </div>
-    <div
-      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between gap-[15px] border-t border-white/10 pb-[17px] pt-[15px] text-[9px] text-[#a99587] min-[421px]:flex-row">
-      <span>© 2026 Mocha Café &amp; Roastery</span><span>Made for slow coffee days.</span>
     </div>
   </footer>
 </body>
